@@ -39,4 +39,16 @@
 <loc>https://www.chat-iraq.com/chat/</loc>
 <changefreq>weekly</changefreq>
 </url>
+<url>
+<loc>https://www.chat-iraq.com/chatf2/</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://www.chat-iraq.com/hams0/</loc>
+<changefreq>weekly</changefreq>
+</url>
+<url>
+<loc>https://www.chat-iraq.com/ksa-3/</loc>
+<changefreq>weekly</changefreq>
+</url>
 </urlset>
