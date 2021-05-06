@@ -35,4 +35,8 @@
 <loc>https://www.chat-iraq.com/baghdady</loc>
 <changefreq>weekly</changefreq>
 </url>
+<url>
+<loc>https://www.chat-iraq.com/chat/</loc>
+<changefreq>weekly</changefreq>
+</url>
 </urlset>
