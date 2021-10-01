@@ -67,4 +67,8 @@
 <loc>https://www.chat-iraq.com/news/</loc>
 <changefreq>weekly</changefreq>
 </url>
+<url>
+<loc>https://www.chat-iraq.com/chatiraq</loc>
+<changefreq>weekly</changefreq>
+</url>
 </urlset>
