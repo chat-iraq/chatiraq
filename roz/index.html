@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- أيقونة الموقع (Favicon) لظهور الشعار في نتائج جوجل والمتصفح -->
+    <link rel="icon" type="image/x-icon" href="https://chat-iraq.com/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="https://chat-iraq.com/favicon.ico">
+    
+    <!-- الوسوم الأساسية للسيو (SEO Meta Tags) -->
+    <title>شات روز | دردشة روز العربية والتعارف مجانًا بدون تسجيل</title>
+    <meta name="description" content="انضم إلى شات روز، أفضل دردشة روز عربية مجانية تتيح لك التواصل والتعارف مع أصدقاء من مختلف أنحاء العالم العربي بدون تسجيل وبسرعة فائقة على الجوال.">
+    <meta name="keywords" content="شات روز, دردشة روز, موقع شات روز, شات روز للجوال, دردشة روز الكتابية, غرف شات روز, تعارف شات روز, موقع روز للدردشة, شات العراق">
+    
+    <!-- الرابط الثابت (Canonical URL) لمنع تكرار المحتوى في جوجل -->
+    <link rel="canonical" href="https://chat-iraq.com/roz">
+
+    <!-- وسم الروابط المفتوحة للسوشيال ميديا (Open Graph / Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="شات روز | دردشة روز العربية والتعارف مجانًا">
+    <meta property="og:description" content="تواصل مع أصدقاء جدد عبر دردشة روز السريعة والمميزة. شات كتابي مجاني تمامًا ومناسب لكل الأجهزة.">
+    <meta property="og:image" content="https://chat-iraq.com/favicon.ico">
+    <meta property="og:url" content="https://chat-iraq.com/roz">
+    <meta property="og:site_name" content="شات العراق">
+
+    <!-- وسم تويتر (Twitter Cards) -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="شات روز | دردشة روز">
+    <meta name="twitter:description" content="أسرع دردشة روز عربية للهواتف الذكية.">
+    <meta name="twitter:image" content="https://chat-iraq.com/favicon.ico">
+
+    <!-- البيانات المنظمة من جوجل (Schema Markup) مرتبطة برابط صفحتك الجديد -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "شات روز",
+      "url": "https://chat-iraq.com/roz",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://chat-iraq.com/roz?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- تحسين سرعة التحميل بالخطوط (Preconnect) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- أسلوب تصميم داخلي فائق السرعة ومتوافق تماماً مع الجوال ويوفر الـ Cumulative Layout Shift (CLS) -->
+    <style>
+        :root {
+            --primary-color: #ff4a7d; 
+            --secondary-color: #4a154b;
+            --text-color: #333;
+            --bg-light: #fff5f7;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
+        body { background-color: #fcfcfc; color: var(--text-color); line-height: 1.6; }
+        header { background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)); color: white; padding: 20px 10px; text-align: center; }
+        header h1 { font-size: 2.2rem; margin-bottom: 10px; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        .container { max-width: 1200px; margin: 20px auto; padding: 0 15px; }
+        
+        /* واجهة الدخول السريع للدردشة */
+        .chat-window-mock { background: white; border: 2px dashed var(--primary-color); border-radius: 12px; padding: 40px 20px; text-align: center; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .cta-btn { background-color: var(--primary-color); color: white; padding: 15px 40px; border: none; border-radius: 30px; font-size: 1.3rem; font-weight: bold; cursor: pointer; text-decoration: none; display: inline-block; transition: transform 0.2s; }
+        .cta-btn:hover { transform: scale(1.05); }
+
+        /* سيو المحتوى والكلمات المفتاحية */
+        .seo-content { background: white; padding: 25px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
+        .seo-content h2 { color: var(--secondary-color); margin-bottom: 15px; font-size: 1.6rem; border-right: 4px solid var(--primary-color); padding-right: 10px; }
+        .seo-content p { margin-bottom: 20px; color: #555; text-align: justify; }
+        
+        /* شبكة الكلمات الذيلية */
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px; }
+        .feature-card { background: var(--bg-light); padding: 20px; border-radius: 8px; border-top: 3px solid var(--primary-color); }
+        .feature-card h3 { color: var(--secondary-color); margin-bottom: 10px; font-size: 1.2rem; }
+
+        footer { background: #222; color: #ccc; text-align: center; padding: 20px; margin-top: 40px; font-size: 0.9rem; }
+        footer a { color: var(--primary-color); text-decoration: none; }
+        
+        /* توافق تام مع شاشات الجوال المتنوعة */
+        @media (max-width: 768px) {
+            header h1 { font-size: 1.8rem; }
+            .cta-btn { width: 100%; padding: 12px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر مروّس بأقوى كلمة مفتاحية H1 لجوجل -->
+    <header>
+        <h1>شات روز | دردشة روز العربية</h1>
+        <p>المنصة الأسرع للتعارف والتواصل الاجتماعي التابعة لشبكة شات العراق</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- منطقة زر الدخول المباشر إلى تطبيق الشات الخاص بك -->
+        <main class="chat-window-mock">
+            <h2>أهلاً بك في دردشة روز الأصلي</h2>
+            <p style="margin-bottom: 20px; color: #666;">اضغط على الزر أدناه لبدء المحادثة الفورية والتعرف على أصدقاء جدد.</p>
+            <a href="https://chat-iraq.com/roz" class="cta-btn">دخول شات روز الفوري</a>
+        </main>
+
+        <!-- قسم السيو والمحتوى الغني بالكلمات المفتاحية والذيلية لتصدر نتائج جوجل -->
+        <section class="seo-content">
+            <h2>ما هو موقع شات روز؟</h2>
+            <p>
+                يعتبر <strong>شات روز</strong> أو <strong>دردشة روز</strong> منصة متطورة ومجانية تهدف إلى جمع الشباب والبنات من كافة أنحاء الوطن العربي في بيئة محترمة وآمنة. إذا كنت تبحث عن موقع يوفر لك خصوصية كاملة وسرعة فائقة في التصفح دون الحاجة إلى تحميل تطبيقات ثقيلة، فإن موقع روز للدردشة والمقدم لكم عبر شبكة <a href="https://chat-iraq.com">شات العراق</a> هو خيارك الأنسب.
+            </p>
+
+            <h2>لماذا يفضل المستخدمون دردشة روز للجوال؟</h2>
+            <p>
+                تم تصميم هذه الصفحة بأحدث التقنيات لضمان توافقها التام مع خوارزميات جوجل الحديثة (Mobile-First Indexing). هذا يعني أن الموقع يفتح على هاتفك المحمول بلمحة بصر، مما يمنحك تجربة مستخدم سلسة وممتازة (Core Web Vitals) لتفادي أي مشاكل في بطء الاستجابة أو انزياح المحتوى.
+            </p>
+
+            <!-- شبكة الكلمات الذيلية (Long-tail Keywords) مدمجة في المزايا لمنع الحظر وكسب الثقة -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>غرف شات روز المتنوعة</h3>
+                    <p>يحتوي الموقع على غرف دردشة مخصصة لكل الدول العربية (العراق، مصر، السعودية، المغرب، والخليج) لسهولة الوصول لمن تحب.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>دردشة روز الكتابية والصوتية</h3>
+                    <p>استمتع بإرسال الرسائل النصية، الرموز التعبيرية، ومشاركة الصور بكل سهولة وبأعلى مستويات الحماية والسرعة.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>شات روز بدون تسجيل أو إيميل</h3>
+                    <p>لا حاجة لتعقيدات إنشاء الحسابات، يمكنك اختيار اسم مستعار والدخول مباشرة لبدء التعارف الفوري وبشكل سري عبر الرابط المعتمد لـ دردشة روز.</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- تذييل الصفحة يحتوي على حقوق الملكية الفكرية والروابط الرسمية -->
+    <footer>
+        <p>&copy; 2026 <a href="https://chat-iraq.com">شات العراق</a> - غرف شات روز. جميع الحقوق محفوظة.</p>
+    </footer>
+
+</body>
+</html>
