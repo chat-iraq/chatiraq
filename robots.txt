@@ -1,2 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
+Sitemap: https://www.chat-iraq.com/sitemap.xml
+Sitemap: https://www.chat-iraq.com/sitemape.xml
+Sitemap: https://www.chat-iraq.com/sitemap.txt
