@@ -1,4 +1,4 @@
-﻿https://www.chat-iraq.com/
+https://www.chat-iraq.com/
 https://www.chat-iraq.com/iraq.html
 https://www.chat-iraq.com/saudi.html
 https://www.chat-iraq.com/egypt.html
@@ -771,3 +771,10 @@ https://www.chat-iraq.com/contact.html
 https://www.chat-iraq.com/privacy.html
 https://www.chat-iraq.com/terms.html
 https://www.chat-iraq.com/404.html
+https://www.chat-iraq.com/articles.html
+https://www.chat-iraq.com/articles/kayf-takhtar-ism-mustaar.html
+https://www.chat-iraq.com/articles/alamn-fi-shat.html
+https://www.chat-iraq.com/articles/limadha-yuhzhar-baadh-alaadha.html
+https://www.chat-iraq.com/articles/kitabi-am-sawti.html
+https://www.chat-iraq.com/articles/sadaqat-min-shuruq-alghuraf.html
+https://www.chat-iraq.com/articles/adab-almuhadatha-fi-ghuraf.html
