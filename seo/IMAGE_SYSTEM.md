@@ -1,7 +1,7 @@
 # نظام الصور - IMAGE_SYSTEM
 
 - الموقع: شات عسل تايم (https://www.chat-iraq.com)
-- إجمالي JPG: 902 — PNG: 98.
+- إجمالي JPG: 904 — PNG: 98.
 - صور الغرف: `img/rooms/<slug>.jpg` (slug = مسار الصفحة، مثال `3asl/index.html` → `3asl-index.jpg`).
 - صور المقالات: `img/article-<slug>.jpg` بعرض 1280×630.
 - صورة العلامة: `img/prv1.png` — صورة المؤلف: `Kaz.png` (موجودة على الجذر، 227,414 بايت).

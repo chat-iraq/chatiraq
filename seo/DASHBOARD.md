@@ -2,13 +2,13 @@
 
 | المؤشر | القيمة |
 |---|---|
-| Total Pages | 827 |
-| Published | 827 |
+| Total Pages | 836 |
+| Published | 836 |
 | Draft | 0 |
 | Needs Review | 0 |
 | Rejected | 0 |
-| Articles | 16 |
-| Questions | 0 (لا يوجد نظام أسئلة بعد) |
+| Articles | 18 |
+| Questions | 5 (نظام أسئلة أولي — FAQPage) |
 | Pillars | 25 |
 | Clusters | 11 |
 | Duplicate Risk (high/medium) | 0 / 33 |

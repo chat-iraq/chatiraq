@@ -1,0 +1,325 @@
+{
+ "site": "chatiraq",
+ "generatedAt": "2026-09-18",
+ "states": [
+  "candidate",
+  "researching",
+  "draft",
+  "qa",
+  "review",
+  "approved",
+  "published",
+  "rejected",
+  "merge",
+  "redirect",
+  "update"
+ ],
+ "policy": "لا نشر تلقائي؛ كل عنصر يمر عبر Quality Gate (§50).",
+ "count": 38,
+ "queue": [
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/adab-al-sual-wal-radd-fi-al-ghuraf.html",
+   "title": "أدب السؤال والرد في غرف الدردشة - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/adab-almuhadatha-fi-ghuraf.html",
+   "title": "آداب المحادثة في غرف الدردشة العربية - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/ahkam-tawqit-almulahazat-fi-al-ghuraf.html",
+   "title": "أفضل أوقات النشاط في غرف الدردشة - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/akhtaa-shaia-fi-ghuraf-al-shat.html",
+   "title": "أخطاء شائعة في غرف الشات وكيف تتجنبها - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/alamat-ghurfat-al-dardasha-al-jayidah.html",
+   "title": "علامات غرفة الدردشة الجيدة - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/alamn-fi-shat.html",
+   "title": "الأمان في الشات: نصائح تحميك من المحتالين - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-tabni-sadqa-aminah-ala-al-internet.html",
+   "title": "كيف تبني صداقة آمنة على الإنترنت؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-tadamin-khususiyatak-fi-al-shat.html",
+   "title": "كيف تضمن خصوصيتك في الشات؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-tahmi-hsabak-fi-ghurfat-al-dardasha.html",
+   "title": "كيف تحمي حسابك داخل غرفة الدردشة؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-takhtar-ghurfat-al-dardasha-al-munasibah.html",
+   "title": "كيف تختار غرفة الدردشة المناسبة لك؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-takhtar-ism-mustaar.html",
+   "title": "كيف تختار اسماً مستعاراً مناسباً في الشات؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-tataamal-maa-al-mutaharrishin.html",
+   "title": "كيف تتعامل مع المتحرشين في الشات؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kitabi-am-sawti.html",
+   "title": "الشات الكتابي أم الصوتي؟ أي منهما يناسبك - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/limadha-yuhzhar-baadh-alaadha.html",
+   "title": "لماذا يُحظر بعض الأعضاء في الشات العربي؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/maana-al-rumuz-wal-taabirat-fi-al-shat.html",
+   "title": "معاني الرموز والتعبيرات في الشات - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "published",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/sadaqat-min-shuruq-alghuraf.html",
+   "title": "كيف تبني صداقات حقيقية من غرف الشات؟ - شات عسل تايم للجوال",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "qualityScore": 100
+  },
+  {
+   "state": "candidate",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/kayf-talab-al-musaeadah-dakhil-al-ghuraf.html",
+   "title": "كيف تطلب المساعدة داخل غرف الدردشة",
+   "keyword": "طلب المساعدة في الشات",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "priority": "منخفضة"
+  },
+  {
+   "state": "candidate",
+   "type": "Article",
+   "url": "https://www.chat-iraq.com/articles/al-farq-bayn-al-mubtadi-wal-muhtarif-fi-al-shat.html",
+   "title": "الفرق بين المبتدئ والمحترف في استخدام الشات",
+   "keyword": "احتراف استخدام الشات",
+   "intent": "Informational",
+   "cluster": "المقالات",
+   "priority": "منخفضة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/aaraq-alnbla.html",
+   "title": "عراق النبلاء",
+   "reason": "دمج/تحديث أو إعادة توجيه"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/oman.html",
+   "title": "عمان",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/algeria.html",
+   "title": "الجزائر",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/syria.html",
+   "title": "سوريا",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/qatar.html",
+   "title": "قطر",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/lebanon.html",
+   "title": "لبنان",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/bnwth-aamry.html",
+   "title": "بنوتة عمري",
+   "reason": "دمج/تحديث أو إعادة توجيه"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/tunnis.html",
+   "title": "تونس",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/palestine.html",
+   "title": "فلسطين",
+   "reason": "مقبولة إذا اختلفت النية والقيمة"
+  },
+  {
+   "state": "update",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/voicechatar.html",
+   "title": "صوتي",
+   "reason": "دمج/تحديث أو إعادة توجيه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/tunnis.html",
+   "title": "https://www.chat-iraq.com/tunnis.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/palestine.html",
+   "title": "https://www.chat-iraq.com/palestine.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/kuwait.html",
+   "title": "https://www.chat-iraq.com/kuwait.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/yemen.html",
+   "title": "https://www.chat-iraq.com/yemen.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/lebanon.html",
+   "title": "https://www.chat-iraq.com/lebanon.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/iraqienaa.html",
+   "title": "https://www.chat-iraq.com/iraqienaa.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/iraqi-chat.html",
+   "title": "https://www.chat-iraq.com/iraqi-chat.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/morocco.html",
+   "title": "https://www.chat-iraq.com/morocco.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/voicechatar.html",
+   "title": "https://www.chat-iraq.com/voicechatar.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  },
+  {
+   "state": "merge",
+   "type": "Review",
+   "url": "https://www.chat-iraq.com/aaman.html",
+   "title": "https://www.chat-iraq.com/aaman.html",
+   "reason": "مراجعة دلالية قبل أي محتوى مشابه"
+  }
+ ]
+}
