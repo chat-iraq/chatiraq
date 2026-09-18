@@ -1,0 +1,14 @@
+{
+  "site": "chatiraq",
+  "generatedAt": "2026-09-18",
+  "triggers": ["انخفاض الزيارات","انخفاض CTR","تغير المعلومات","قدم المحتوى","أسئلة جديدة","منافسون جدد","تغير نية البحث"],
+  "rules": ["كل صفحة معلوماتية (المقالات) تُراجَع كل 90 يوماً","صفحات الخدمات/القوانين تُراجَع كل 180 يوماً","صفحات الغرف تُراجَع عند تغيّر العلامة أو البنية","لا يُغيّر تاريخ التحديث دون تعديل حقيقي"],
+  "watchlist": [
+    {"url":"https://www.chat-iraq.com/articles/adab-almuhadatha-fi-ghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/alamn-fi-shat.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-takhtar-ism-mustaar.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kitabi-am-sawti.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/limadha-yuhzhar-baadh-alaadha.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/sadaqat-min-shuruq-alghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"}
+  ]
+}

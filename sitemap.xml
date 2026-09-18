@@ -5453,4 +5453,11 @@
 <priority>0.6</priority>
 <image:image><image:loc>https://www.chat-iraq.com/img/article-adab-almuhadatha-fi-ghuraf.jpg</image:loc><image:caption>آداب المحادثة في غرف الدردشة العربية</image:caption></image:image>
 </url>
+<url>
+<loc>https://www.chat-iraq.com/author/kaz-alwadi/</loc>
+<lastmod>2026-09-18</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+<image:image><image:loc>https://www.chat-iraq.com/Kaz.png</image:loc><image:caption>كاز الوادي - كاتب ومحرر رقمي</image:caption></image:image>
+</url>
 </urlset>

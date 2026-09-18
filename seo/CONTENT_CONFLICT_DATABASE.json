@@ -1,0 +1,24 @@
+{
+  "site": "chatiraq",
+  "generatedAt": "2026-09-18",
+  "rule": "لا تُنشأ صفحة جديدة إذا تطابق نفس الموضوع + نفس نية البحث + نفس القيمة، حتى لو اختلفت الكلمات.",
+  "totalConflicts": 16,
+  "conflicts": [
+    {"kind":"keyword","key":"عراق النبلاء","count":2,"pages":["https://www.chat-iraq.com/aaraq-alnbla.html","https://www.chat-iraq.com/iraq/"]},
+    {"kind":"keyword","key":"عمان","count":2,"pages":["https://www.chat-iraq.com/oman.html","https://www.chat-iraq.com/oman-chat/"]},
+    {"kind":"keyword","key":"الجزائر","count":2,"pages":["https://www.chat-iraq.com/algeria.html","https://www.chat-iraq.com/algeria-chat/"]},
+    {"kind":"keyword","key":"سوريا","count":2,"pages":["https://www.chat-iraq.com/syria.html","https://www.chat-iraq.com/syria-chat/"]},
+    {"kind":"keyword","key":"قطر","count":2,"pages":["https://www.chat-iraq.com/qatar.html","https://www.chat-iraq.com/qatar-chat/"]},
+    {"kind":"keyword","key":"لبنان","count":2,"pages":["https://www.chat-iraq.com/lebanon.html","https://www.chat-iraq.com/lebanon-chat/"]},
+    {"kind":"keyword","key":"بنوتة عمري","count":2,"pages":["https://www.chat-iraq.com/bnwth-aamry.html","https://www.chat-iraq.com/banotah/"]},
+    {"kind":"keyword","key":"تونس","count":2,"pages":["https://www.chat-iraq.com/tunnis.html","https://www.chat-iraq.com/tunis-chat/"]},
+    {"kind":"keyword","key":"فلسطين","count":2,"pages":["https://www.chat-iraq.com/palestine.html","https://www.chat-iraq.com/palestine-chat/"]},
+    {"kind":"keyword","key":"صوتي","count":2,"pages":["https://www.chat-iraq.com/voicechatar.html","https://www.chat-iraq.com/voicechat/"]},
+    {"kind":"keyword","key":"المغرب","count":2,"pages":["https://www.chat-iraq.com/morocco.html","https://www.chat-iraq.com/maroc-chat/"]},
+    {"kind":"keyword","key":"عراقنا","count":3,"pages":["https://www.chat-iraq.com/iraqienaa.html","https://www.chat-iraq.com/iraqna.html","https://www.chat-iraq.com/iraqya/"]},
+    {"kind":"keyword","key":"ليبيا","count":2,"pages":["https://www.chat-iraq.com/libya.html","https://www.chat-iraq.com/libya-chat/"]},
+    {"kind":"keyword","key":"عراقي للجوال","count":2,"pages":["https://www.chat-iraq.com/iraqi-chat.html","https://www.chat-iraq.com/iq/"]},
+    {"kind":"keyword","key":"اليمن","count":2,"pages":["https://www.chat-iraq.com/yemen.html","https://www.chat-iraq.com/yemen-chat/"]},
+    {"kind":"keyword","key":"الكويت","count":2,"pages":["https://www.chat-iraq.com/kuwait.html","https://www.chat-iraq.com/kuwait-chat/"]}
+  ]
+}
