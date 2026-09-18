@@ -4,6 +4,7 @@
 - عدد الصفحات المقترحة: 12 (ضمن نطاق 10–20).
 - لا تبدأ أي صفحة قبل استيفاء خطوات §53، ولا تُنشأ صفحة دون قيمة حقيقية (§59/§81).
 
+## Batch 1 (10 صفحات - وفق §48)
 | URL | Title | Keyword | Intent | Cluster | Reason | Existing conflict | Priority |
 |---|---|---|---|---|---|---|---|
 | /articles/kayf-tahmi-hsabak-fi-ghurfat-al-dardasha.html | كيف تحمي حسابك داخل غرفة الدردشة | حماية حساب في الشات | Informational | المقالات | يكمل مقال الأمان بزاوية الحساب وكلمات المرور، موضوع مطلوب لجمهور الغرف. | منخفض (الأمان العام موجود لكن الحساب غير مخصص) | عالية |
@@ -16,6 +17,10 @@
 | /articles/maana-al-rumuz-wal-taabirat-fi-al-shat.html | معاني الرموز والتعبيرات في الشات | رموز الشات ومعانيها | Informational | المقالات | محتوى توضيحي ممتع ومنخفض المنافسة ومفيد للمبتدئين. | لا يوجد | متوسطة |
 | /articles/kayf-tabni-sadqa-aminah-ala-al-internet.html | كيف تبني صداقة آمنة على الإنترنت | صداقة آمنة على الإنترنت | Informational | المقالات | يكمل مقال الصداقة بزاوية السلامة والتدرج. | منخفض (يتقاطع مع الصداقة) | متوسطة |
 | /articles/ahkam-tawqit-almulahazat-fi-al-ghuraf.html | أفضل أوقات النشاط في غرف الدردشة | أوقات نشاط غرف الدردشة | Informational | المقالات | يربط الزائر بسلوك الاستخدام ويعزز صفحات الغرف. | لا يوجد | متوسطة |
+
+## Batch 2 (مؤجّل - لا يبدأ قبل اجتياز Batch 1 لمراقبة الجودة)
+| URL | Title | Keyword | Intent | Cluster | Reason | Existing conflict | Priority |
+|---|---|---|---|---|---|---|---|
 | /articles/kayf-tatalam-al-tawasul-min-al-sifr.html | كيف تتعلم مهارات التواصل من الصفر | تعلم مهارات التواصل | Informational | المقالات | محتوى تنموي عام ذو صلة بجمهور الغرف. | لا يوجد | منخفضة |
 | /articles/al-farq-bayn-al-mubtadi-wal-muhtarif-fi-al-shat.html | الفرق بين المبتدئ والمحترف في استخدام الشات | احتراف استخدام الشات | Informational | المقالات | محتوى تمكيني يبني ثقة الزائر بالمحتوى. | لا يوجد | منخفضة |
 

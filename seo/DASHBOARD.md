@@ -2,12 +2,12 @@
 
 | المؤشر | القيمة |
 |---|---|
-| Total Pages | 817 |
-| Published | 817 |
+| Total Pages | 827 |
+| Published | 827 |
 | Draft | 0 |
 | Needs Review | 0 |
 | Rejected | 0 |
-| Articles | 6 |
+| Articles | 16 |
 | Questions | 0 (لا يوجد نظام أسئلة بعد) |
 | Pillars | 25 |
 | Clusters | 11 |

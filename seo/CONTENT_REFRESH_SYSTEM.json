@@ -4,11 +4,21 @@
   "triggers": ["انخفاض الزيارات","انخفاض CTR","تغير المعلومات","قدم المحتوى","أسئلة جديدة","منافسون جدد","تغير نية البحث"],
   "rules": ["كل صفحة معلوماتية (المقالات) تُراجَع كل 90 يوماً","صفحات الخدمات/القوانين تُراجَع كل 180 يوماً","صفحات الغرف تُراجَع عند تغيّر العلامة أو البنية","لا يُغيّر تاريخ التحديث دون تعديل حقيقي"],
   "watchlist": [
+    {"url":"https://www.chat-iraq.com/articles/adab-al-sual-wal-radd-fi-al-ghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/adab-almuhadatha-fi-ghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/ahkam-tawqit-almulahazat-fi-al-ghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/akhtaa-shaia-fi-ghuraf-al-shat.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/alamat-ghurfat-al-dardasha-al-jayidah.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/alamn-fi-shat.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-tabni-sadqa-aminah-ala-al-internet.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-tadamin-khususiyatak-fi-al-shat.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-tahmi-hsabak-fi-ghurfat-al-dardasha.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-takhtar-ghurfat-al-dardasha-al-munasibah.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/kayf-takhtar-ism-mustaar.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/kayf-tataamal-maa-al-mutaharrishin.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/kitabi-am-sawti.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/limadha-yuhzhar-baadh-alaadha.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
+    {"url":"https://www.chat-iraq.com/articles/maana-al-rumuz-wal-taabirat-fi-al-shat.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"},
     {"url":"https://www.chat-iraq.com/articles/sadaqat-min-shuruq-alghuraf.html","type":"Article","lastReview":"2026-09-18","nextReview":"2026-12-17","status":"active"}
   ]
 }
