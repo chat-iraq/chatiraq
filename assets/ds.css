@@ -35,8 +35,8 @@
   --bg:#f7f8f5; --soft:#ffffff; --line:#e7eae3; --grad:var(--ds-grad);
 
   /* typography */
-  --ds-font:"Noto Kufi Arabic","Noto Naskh Arabic","Open Sans",Tahoma,system-ui,-apple-system,Arial,sans-serif;
-  --ds-font-display:"Noto Kufi Arabic","Noto Naskh Arabic","Open Sans",Tahoma,system-ui,sans-serif;
+  --ds-font:"Noto Naskh Arabic","Noto Kufi Arabic","Open Sans",Tahoma,system-ui,-apple-system,Arial,sans-serif;
+  --ds-font-display:"Noto Kufi Arabic","Open Sans","Noto Naskh Arabic",Tahoma,system-ui,sans-serif;
   --ds-fs-xs:.75rem; --ds-fs-sm:.875rem; --ds-fs-md:1rem; --ds-fs-lg:1.125rem;
   --ds-fs-xl:1.375rem; --ds-fs-2xl:clamp(1.5rem,3.2vw,2rem); --ds-fs-3xl:clamp(2rem,5vw,2.9rem);
   --ds-lh-tight:1.35; --ds-lh-base:1.75; --ds-lh-loose:1.9;
@@ -431,3 +431,8 @@ html[dir="ltr"] .ds-drawer{transform:translateX(115%)}
 .ds-cta-mini{display:inline-flex;align-items:center;justify-content:center;background:var(--ds-grad);color:#fff !important;text-decoration:none !important;font-weight:800;border-radius:var(--ds-r-full);padding:.45rem 1rem;font-size:var(--ds-fs-sm);box-shadow:var(--ds-shadow-1);white-space:nowrap;margin-inline-start:.4rem}
 .ds-cta-mini:hover{filter:brightness(1.05)}
 @media (max-width:860px){.ds-search-mini{display:none}}
+/* ===== توسيط العناوين مثل كتابة مدونة خمسات (blog.khamsat.com) ===== */
+.ds-hero{text-align:center}
+.ds-hero h1{text-align:center}
+.ds-hero p{text-align:center;margin-inline:auto}
+:where(.ds-card,section.card,div.card)>h2,.ds-h2{text-align:center;margin-inline:auto}
