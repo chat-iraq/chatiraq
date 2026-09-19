@@ -129,6 +129,7 @@ for p in managed:
             cand = ref.lstrip('/')
         else:
             cand = resolve(d, ref)
+        cand = urllib.parse.unquote(cand)
         full = os.path.join(ROOT, cand.replace('/', os.sep))
         if not os.path.exists(full):
             broken += 1
