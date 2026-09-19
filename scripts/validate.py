@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """Automated QA per s.txt 51. Stdlib only. Exits non-zero on critical issues."""
-import os, sys, re, io, json, glob, html
+import os, sys, re, io, json, glob, html, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STRICT = '--strict' in sys.argv
-DOMAIN = 'https://www.iraqia-chat.com'
+DOMAIN = 'https://www.chat-iraq.com'
 SKIP_DIRS = ('.git', 'seo', 'admin', 'scripts', '.github')
 # Legacy standalone vanity chat-app folders: kept in the DS shell for consistency,
 # but excluded from the managed content-set checks (their inline legacy markup is not part of the content system).
