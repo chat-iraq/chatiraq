@@ -5593,4 +5593,18 @@
 <priority>0.6</priority>
 <image:image><image:loc>https://www.chat-iraq.com/img/article-kitabi-am-sawti.jpg</image:loc><image:caption>الشات الكتابي أم الصوتي؟ أي منهما يناسبك</image:caption></image:image>
 </url>
+<url>
+<loc>https://www.chat-iraq.com/Forum/</loc>
+<lastmod>2026-09-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+<image:image><image:loc>https://www.chat-iraq.com/img/rooms/Forum-index.jpg</image:loc><image:caption>منتدى شات عسل تايم</image:caption></image:image>
+</url>
+<url>
+<loc>https://www.chat-iraq.com/zwar/</loc>
+<lastmod>2026-09-13</lastmod>
+<changefreq>weekly</changefreq>
+<priority>0.7</priority>
+<image:image><image:loc>https://www.chat-iraq.com/img/rooms/zwar-index.jpg</image:loc><image:caption>دردشة الزوار</image:caption></image:image>
+</url>
 </urlset>
