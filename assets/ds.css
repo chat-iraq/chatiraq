@@ -3,8 +3,16 @@
    Editorial "blog.khamsat.com"-inspired layer · loads AFTER premium.min.css
    Clean white canvas, content-first cards, subtle borders, amber honey brand.
    Anatomy: Tokens → Base → Layout → Components → Patterns →
-             Utilities → Motion → Dark → Print → V1 reskin → Blog → Header
+             Utilities → Motion → Dark → Print · V1 reskin · Blog · Header
    ============================================================ */
+
+/* ---------- 0. KHAMSAT FONTS (self-hosted from hsoub CDN) ---------- */
+@font-face{font-family:'Noto Kufi Arabic';font-style:normal;font-weight:400;src:url(/assets/fonts/NotoKufiArabic-Regular.woff2) format('woff2')}
+@font-face{font-family:'Noto Kufi Arabic';font-style:normal;font-weight:700;src:url(/assets/fonts/NotoKufiArabic-Bold.woff2) format('woff2')}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:400;src:url(/assets/fonts/NotoNaskhArabic-Regular.woff2) format('woff2')}
+@font-face{font-family:'Noto Naskh Arabic';font-style:normal;font-weight:700;src:url(/assets/fonts/NotoNaskhArabic-Bold.woff2) format('woff2')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:url(/assets/fonts/OpenSans-Regular-latin.woff2) format('woff2')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:url(/assets/fonts/OpenSans-Bold-latin.woff2) format('woff2')}
 
 /* ---------- 1. TOKENS ---------- */
 :root {
@@ -27,8 +35,8 @@
   --bg:#f7f8f5; --soft:#ffffff; --line:#e7eae3; --grad:var(--ds-grad);
 
   /* typography */
-  --ds-font:"Segoe UI",Tahoma,"Noto Kufi Arabic","Noto Naskh Arabic","Cairo",system-ui,-apple-system,Arial,sans-serif;
-  --ds-font-display:"Segoe UI",Tahoma,"Cairo","Noto Kufi Arabic",system-ui,sans-serif;
+  --ds-font:"Noto Kufi Arabic","Noto Naskh Arabic","Open Sans",Tahoma,system-ui,-apple-system,Arial,sans-serif;
+  --ds-font-display:"Noto Kufi Arabic","Noto Naskh Arabic","Open Sans",Tahoma,system-ui,sans-serif;
   --ds-fs-xs:.75rem; --ds-fs-sm:.875rem; --ds-fs-md:1rem; --ds-fs-lg:1.125rem;
   --ds-fs-xl:1.375rem; --ds-fs-2xl:clamp(1.5rem,3.2vw,2rem); --ds-fs-3xl:clamp(2rem,5vw,2.9rem);
   --ds-lh-tight:1.35; --ds-lh-base:1.75; --ds-lh-loose:1.9;
