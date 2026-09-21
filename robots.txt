@@ -3,6 +3,5 @@ Allow: /
 Disallow: /seo/
 Disallow: /scripts/
 Disallow: /admin/
-Sitemap: https://www.chat-iraq.com/sitemap.xml
-Sitemap: https://www.chat-iraq.com/sitemape.xml
-Sitemap: https://www.chat-iraq.com/sitemap.txt
+Sitemap: https://chat-iraq.com/sitemap.xml
+Sitemap: https://chat-iraq.com/sitemap.txt
