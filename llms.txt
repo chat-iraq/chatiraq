@@ -1,0 +1,25 @@
+# شات عسل تايم — Chat Iraq
+
+> منصة دردشة عربية مجانية (شات كتابي وصوتي) تعمل مباشرة من المتصفح على الجوال والكمبيوتر، بلا تسجيل، بغرف للعراق والخليج والعالم العربي، بأجواء عائلية هادئة يشرف عليها مشرفون متواجدون دائمًا.
+
+## Important URLs
+
+- [الرئيسية](https://chat-iraq.com/)
+- [دخول الشات الآن](https://chat-iraq.com/)
+- [منتدى الدردشة](https://chat-iraq.com/Forum/)
+- [المقالات](https://chat-iraq.com/articles)
+- [الأسئلة الشائعة](https://chat-iraq.com/questions)
+- [دليل البحث](https://chat-iraq.com/search)
+- [الاشتراكات](https://chat-iraq.com/sub)
+- [قوانين الموقع](https://chat-iraq.com/rules)
+- [شروط الاستخدام](https://chat-iraq.com/terms)
+- [سياسة الخصوصية](https://chat-iraq.com/privacy)
+- [اتصل بنا](https://chat-iraq.com/contact)
+- [خريطة الموقع XML](https://chat-iraq.com/sitemap.xml)
+
+## Optional: Site overview
+
+- الموقع ثابت مُصدَّر من ووردبريس ويُستضاف على GitHub Pages بدون قاعدة بيانات.
+- المسارات نظيفة بدون امتداد `.html` (الملفات الفعلية تبقى بصيغة `.html` على القرص).
+- كل صفحة غرفة تتبع قالبًا موحّدًا: LCP صورة بانر + عنوان h1 + اقتباس + شرائح مميزات.
+- الأنماط في `/assets/ds.css` و`/assets/premium.min.css`، والخطوط مذكّرة ذاتيًا في `/assets/fonts/`.
