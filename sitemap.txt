@@ -1,6 +1,5 @@
-https://chat-iraq.com/404
 https://chat-iraq.com/
-https://chat-iraq.com/sitemap
+https://chat-iraq.com/404/
 https://chat-iraq.com/a1/
 https://chat-iraq.com/a2/
 https://chat-iraq.com/a3/
@@ -226,6 +225,9 @@ https://chat-iraq.com/articles/kitabi-am-sawti/
 https://chat-iraq.com/articles/limadha-yuhzhar-baadh-alaadha/
 https://chat-iraq.com/articles/maana-al-rumuz-wal-taabirat-fi-al-shat/
 https://chat-iraq.com/articles/sadaqat-min-shuruq-alghuraf/
+https://chat-iraq.com/asel/
+https://chat-iraq.com/asel-alkhlyj/
+https://chat-iraq.com/asel-jdyd/
 https://chat-iraq.com/asfora/
 https://chat-iraq.com/ashjan-alrwh/
 https://chat-iraq.com/ashtqtlk/
@@ -261,8 +263,8 @@ https://chat-iraq.com/bghdad-taym/
 https://chat-iraq.com/bghdadyh/
 https://chat-iraq.com/bhr-bghdad/
 https://chat-iraq.com/bhrynyat/
-https://chat-iraq.com/blog/blog.amp
 https://chat-iraq.com/blog/
+https://chat-iraq.com/blog/amp/
 https://chat-iraq.com/bnat-aaman/
 https://chat-iraq.com/bnat-aaraq/
 https://chat-iraq.com/bnat-aasl-skr/
@@ -314,6 +316,7 @@ https://chat-iraq.com/bnat-twns/
 https://chat-iraq.com/bnat-wshbab-alaaraq/
 https://chat-iraq.com/bnat-ymn/
 https://chat-iraq.com/bnat-zywnh/
+https://chat-iraq.com/bnoott-asel/
 https://chat-iraq.com/bnt-alaaraq/
 https://chat-iraq.com/bnt-almghrb/
 https://chat-iraq.com/bnt-alsaawdyh/
@@ -369,6 +372,7 @@ https://chat-iraq.com/dmwaa-alaashaq/
 https://chat-iraq.com/dmwaa-bghdad/
 https://chat-iraq.com/dmyat/
 https://chat-iraq.com/drb/
+https://chat-iraq.com/drdsh-asel/
 https://chat-iraq.com/drdshty/
 https://chat-iraq.com/drr/
 https://chat-iraq.com/drralarab/
@@ -764,6 +768,7 @@ https://chat-iraq.com/shrh-wtn/
 https://chat-iraq.com/shrqyh/
 https://chat-iraq.com/shrwq/
 https://chat-iraq.com/shuour/
+https://chat-iraq.com/sitemap/
 https://chat-iraq.com/skr/
 https://chat-iraq.com/skr-bnat/
 https://chat-iraq.com/skr-jwal/
