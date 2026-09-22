@@ -518,3 +518,5 @@ code{background:var(--soft);border:1px solid var(--line);padding:.15rem .5rem;bo
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 @media print{.px-top,.px-nav,.px-cta,.px-band{display:none}.px-hero{border-radius:0}}
 .px-banner{margin:0 0 14px}.px-banner img{width:100%;height:auto;border-radius:14px;display:block;box-shadow:0 2px 12px rgba(0,0,0,.10)}
+.articleimg{position:relative;overflow:hidden}
+.articleimg::before{content:"";position:absolute;inset:0;background:url('/assets/brand-logo.webp') center/56px no-repeat;opacity:.5;pointer-events:none;z-index:2}
