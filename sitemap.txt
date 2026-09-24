@@ -1,3 +1,5 @@
+https://chat-iraq.com/
+https://chat-iraq.com/404/
 https://chat-iraq.com/a1/
 https://chat-iraq.com/a2/
 https://chat-iraq.com/a3/
@@ -67,6 +69,7 @@ https://chat-iraq.com/abha/
 https://chat-iraq.com/abn-alymn/
 https://chat-iraq.com/abu-dhabi-chat/
 https://chat-iraq.com/aden/
+https://chat-iraq.com/admin/
 https://chat-iraq.com/aghanyna/
 https://chat-iraq.com/aghrab/
 https://chat-iraq.com/ahasys/
@@ -343,6 +346,7 @@ https://chat-iraq.com/chatiraq/
 https://chat-iraq.com/contact/
 https://chat-iraq.com/dala/
 https://chat-iraq.com/dby/
+https://chat-iraq.com/design-system/
 https://chat-iraq.com/dha/
 https://chat-iraq.com/dhkh-mhbh/
 https://chat-iraq.com/dhkra/
@@ -641,6 +645,9 @@ https://chat-iraq.com/oman-chat/
 https://chat-iraq.com/oyoun/
 https://chat-iraq.com/palestine/
 https://chat-iraq.com/palestine-chat/
+https://chat-iraq.com/preview/chat-v2/
+https://chat-iraq.com/preview/home-v2/
+https://chat-iraq.com/preview/search-v2/
 https://chat-iraq.com/privacy/
 https://chat-iraq.com/qatar/
 https://chat-iraq.com/qatar-chat/
