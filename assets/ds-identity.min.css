@@ -1,0 +1,21 @@
+/* ============================================================
+   الهوية البرمجية المميّزة للموقع — chatiraq (شات عسل تايم)
+   Rebuild §19/§20/§30 — خطوط محلية woff2 فقط (سرعة فائقة §13/§14/§16)
+   أدوار الخطوط: عناوين «Noto Kufi Arabic» هندسية | نص وقراءة «Noto Naskh Arabic»
+   باليتة ذهبية دافئة (هوية العسل) — §30
+   ============================================================ */
+:root{
+  --ds-font-display:"Noto Kufi Arabic","Noto Naskh Arabic","Open Sans",Tahoma,system-ui,sans-serif;
+  --ds-font:"Noto Naskh Arabic","Noto Kufi Arabic","Open Sans",Tahoma,system-ui,sans-serif;
+  --ds-font-display-role:headings;
+  --ds-font-body-role:body;
+}
+h1,h2,h3,h4,h5,h6,[class*="ds-title"],[class*="px-sec"],[class*="menu_title"],
+.menu-title,.ds-menu_title,.ds-brand b,.ds-brand strong,.ds-card-title,
+.px-card__title,.btn,.ds-btn,.ds-cta-mini,.ds-chip,.ds-chips{
+  font-family:var(--ds-font-display)!important;
+}
+body,input,textarea,select,button,p,a,li,span,div,[class*="ds-"],
+[class*="px-"],td,th,caption{
+  font-family:var(--ds-font)!important;
+}
