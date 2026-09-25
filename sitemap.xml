@@ -16655,4 +16655,10 @@
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
+<url>
+<loc>https://chat-iraq.com/about/</loc>
+<lastmod>2026-09-25</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.4</priority>
+</url>
 </urlset>
