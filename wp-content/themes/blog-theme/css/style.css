@@ -1060,6 +1060,7 @@ p img.aligncenter {
 .pagination .next a:hover {
     background-color: #fbb81c; /* Darker color on hover */
 	color: #fff;
+}
 
 .pagination .prev a:disabled,
 .pagination .next a:disabled {
