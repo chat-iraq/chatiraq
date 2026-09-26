@@ -2,7 +2,9 @@
 import { readFileSync, existsSync } from 'node:fs'
 import { execSync } from 'node:child_process'
 
-const ROOT = 'C:/Users/Kaz/Documents/GitHub/chatiraq'
+const ROOT = process.cwd()
+const D = JSON.parse(readFileSync(ROOT + '/data/forum.json', 'utf8'))
+const ORIGIN = D.origin
 let fail = 0
 const ok = (c, m) => {
   if (!c) fail++
@@ -20,9 +22,12 @@ try {
 /* real parse via a strict-ish check: every <url> has loc+lastmod+priority */
 const urls = [...xml.matchAll(/<url>([\s\S]*?)<\/url>/g)].map((m) => m[1])
 ok(urls.length > 0, `sitemap parsed ${urls.length} <url> blocks`)
-ok(urls.every((u) => /<loc>https:\/\/chat-iraq\.com\/[^<]*<\/loc>/.test(u)), 'every url has an absolute loc')
+ok(
+  urls.every((u) => new RegExp(`<loc>${ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}/[^<]*</loc>`).test(u)),
+  'every url has an absolute loc'
+)
 ok(urls.every((u) => /<lastmod>\d{4}-\d{2}-\d{2}<\/lastmod>/.test(u)), 'every url has lastmod')
-ok(!xml.includes('https://chat-iraq.com/Forum/</loc>\n<lastmod>2026-09-25'), 'legacy Forum entry replaced')
+ok(!xml.includes(ORIGIN + '/Forum/</loc>\n<lastmod>2026-09-25'), 'legacy Forum entry replaced')
 
 /* ---- 2. no duplicate locs ---- */
 const locs = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
@@ -98,7 +103,26 @@ ok(!!bc, 'topic page has BreadcrumbList')
 
 /* ---- 7. nav link present on generated pages ---- */
 ok(t1.includes('>المنتدى</a>'), 'nav contains the forum link')
-ok(t1.includes('https://chat-iraq.com/Forum/'), 'nav points at the forum home')
+ok(t1.includes(ORIGIN + '/Forum/'), 'nav points at the forum home')
+
+/* ---- 7b. the live layer needs its Firebase config, and the right namespace ---- */
+const tHome = readFileSync(ROOT + '/Forum/index.html', 'utf8')
+for (const s of ['/assets/chat-config.js', '/assets/forum-data.js', '/Forum/assets/forum.js', '/Forum/assets/forum-live.js']) {
+  ok(tHome.includes('src="' + s + '"'), 'home page loads ' + s)
+}
+const cfgOrder = tHome.indexOf('/assets/chat-config.js')
+const liveOrder = tHome.indexOf('/Forum/assets/forum-live.js')
+ok(cfgOrder > -1 && liveOrder > cfgOrder, 'chat-config.js loads before forum-live.js')
+const cfgSrc = readFileSync(ROOT + '/assets/chat-config.js', 'utf8')
+const prefix = /roomPrefix:\s*["']([A-Za-z0-9_-]+)["']/.exec(cfgSrc)?.[1]
+ok(!!prefix, 'assets/chat-config.js declares roomPrefix (namespaces the RTDB)')
+if (prefix) {
+  const live = readFileSync(ROOT + '/Forum/assets/forum-live.js', 'utf8')
+  ok(
+    /var NS = 'forum\/' \+ \(cfg\.roomPrefix/.test(live),
+    'forum-live.js namespaces RTDB by roomPrefix ("' + prefix + '") so the two brands cannot mix'
+  )
+}
 
 /* ---- 8. staff page must not be indexable ---- */
 const st = readFileSync(ROOT + '/Forum/staff/index.html', 'utf8')

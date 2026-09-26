@@ -12,13 +12,19 @@ import path from 'node:path'
 
 const WRITE = process.argv.includes('--write')
 const ROOT = path.resolve('.')
+
+/* the site this script runs in declares its own origin + forum path */
+const D = JSON.parse(await readFile(path.join(ROOT, 'data', 'forum.json'), 'utf8'))
+const ORIGIN = D.origin
+const FORUM_URL = ORIGIN + D.base
+
 const SKIP = new Set(['node_modules', 'dist', '.git', '.vercel', 'seo'])
 
-const LINK = '<a href="https://chat-iraq.com/Forum/">المنتدى</a>'
+const LINK = `<a href="${FORUM_URL}">المنتدى</a>`
 /* the nav item we anchor to, and the exact spot the forum link belongs in */
 const ANCHORS = [
-  { find: '<a href="https://chat-iraq.com/questions/">الأسئلة</a>', after: true },
-  { find: '<a href="https://chat-iraq.com/articles/">المقالات</a>', after: true }
+  { find: `<a href="${ORIGIN}/questions/">الأسئلة</a>`, after: true },
+  { find: `<a href="${ORIGIN}/articles/">المقالات</a>`, after: true }
 ]
 
 async function* walk(dir) {

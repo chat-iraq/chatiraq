@@ -2,9 +2,16 @@
   "$schema": "./forum.schema.json",
   "origin": "https://chat-iraq.com",
   "base": "/Forum/",
+  "brand": "شات عسل تايم",
+  "logo": "/assets/brand-logo.webp",
+  "social": [
+    "https://www.facebook.com/chatiraqi",
+    "https://x.com/chatiraqi",
+    "https://www.instagram.com/3asltime"
+  ],
   "title": "منتدى شات عسل تايم",
-  "updated": "2026-09-26T00:00:00+03:00",
   "description": "منتدى شات عسل تايم: أسئلة وإجابات حول الدخول والعضوية، مشاكل الشات، الحظر والشكاوى، والاقتراحات — بجواب رسمي من الإدارة وردود من الأعضاء.",
+  "updated": "2026-09-26T00:00:00+03:00",
   "categories": [
     {
       "key": "access",

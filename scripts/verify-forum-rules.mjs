@@ -1,12 +1,14 @@
 import { readFileSync } from 'node:fs'
-const o = JSON.parse(readFileSync('C:/Users/Kaz/Documents/GitHub/chatiraq/forum-rules.json', 'utf8'))
+import path from 'node:path'
+const o = JSON.parse(readFileSync(path.join(process.cwd(), 'forum-rules.json'), 'utf8'))
 const r = o.rules.forum
+const NS = r['$site'] /* per-site namespace: chat-iraq=asltime, iraqia-chat=durar */
 const CATS = ['access', 'tech', 'ban', 'ideas', 'general']
 let bad = 0
 const p = (c, m) => { if (!c) { bad++; console.log('  FAIL ' + m) } }
 
 for (const c of CATS) {
-  const t = r[c] && r[c]['$topicId']
+  const t = NS[c] && NS[c]['$topicId']
   p(t, c + '.$topicId exists')
   if (!t) continue
   p(t['.read'], c + ' readable')
@@ -19,13 +21,16 @@ for (const c of CATS) {
   }
 }
 
-p(r.staff['.write'] === false, 'staff node not client-writable')
-p(r.counts['.read'] === true, 'counts publicly readable')
-p(r.rate['$uid']['.write'].includes('!data.exists()'), 'rate bucket is write-once (real throttle)')
-p(r.pending['$pid']['.write'].includes("child('rate')"), 'pending write gated by the rate bucket')
-p(r.votes['$topicId']['$uid']['.write'].includes('auth.uid === $uid'), 'votes bound to own uid')
-p(r.read['$uid']['.write'].includes('auth.uid === $uid'), 'read state bound to own uid')
-p(r.reports['.read'].includes("child('staff')"), 'reports readable by staff only')
+p(r.staff['$uid']['.write'] === false, 'staff node not client-writable')
+p(r.staff['.read'] === 'auth != null && auth.uid === $uid', 'staff readable only by its owner')
+p(NS['$other'] && NS['$other']['.write'] === false, 'unknown namespaces denied via $other')
+p(NS.counts['.read'] === true, 'counts publicly readable')
+p(NS.rate['$uid']['.write'].includes('!data.exists()'), 'rate bucket is write-once (real throttle)')
+p(NS.pending['$pid']['.write'].includes("child('rate')"), 'pending write gated by the rate bucket')
+p(NS.pending['$pid']['.write'].includes('$site'), 'pending rate lookup is namespace-scoped')
+p(NS.votes['$topicId']['$uid']['.write'].includes('auth.uid === $uid'), 'votes bound to own uid')
+p(NS.read['$uid']['.write'].includes('auth.uid === $uid'), 'read state bound to own uid')
+p(NS.reports['.read'].includes("child('staff')"), 'reports readable by staff only')
 p(r['.read'] === false && r['.write'] === false, 'forum root itself is not directly readable/writable')
 
 /* brace balance per rule expression */

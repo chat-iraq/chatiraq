@@ -3,7 +3,9 @@
 import { readFileSync, existsSync, readdirSync, statSync } from 'node:fs'
 import path from 'node:path'
 
-const ROOT = 'C:/Users/Kaz/Documents/GitHub/chatiraq'
+const ROOT = process.cwd()
+const D = JSON.parse(readFileSync(ROOT + '/data/forum.json', 'utf8'))
+const ORIGIN = D.origin
 let fail = 0
 
 function forumPages(dir, acc = []) {
@@ -17,7 +19,7 @@ function forumPages(dir, acc = []) {
 
 function resolves(href) {
   let clean = href.split('#')[0].split('?')[0]
-  if (clean.startsWith('https://chat-iraq.com')) clean = clean.replace('https://chat-iraq.com', '')
+  if (clean.startsWith(ORIGIN)) clean = clean.replace(ORIGIN, '')
   if (clean === '' || clean === '/') return existsSync(path.join(ROOT, 'index.html'))
   if (!clean.startsWith('/')) return null /* relative: skip, we emit absolute */
   const rel = decodeURIComponent(clean).replace(/^\/+/, '')
@@ -37,7 +39,7 @@ for (const file of pages) {
   const rel = path.relative(ROOT, file).replace(/\\/g, '/')
   for (const m of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const href = m[1]
-    if (/^(https?:)?\/\//.test(href) && !href.startsWith('https://chat-iraq.com')) continue
+    if (/^(https?:)?\/\//.test(href) && !href.startsWith(ORIGIN)) continue
     if (/^(mailto:|tel:|data:|javascript:|#)/.test(href)) continue
     checked++
     if (resolves(href) === false) {

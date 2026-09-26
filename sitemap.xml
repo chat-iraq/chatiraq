@@ -11449,6 +11449,10 @@
 
 
 
+
+
+
+
 <!-- FORUM:START -->
 <url>
 <loc>https://chat-iraq.com/Forum/</loc>
@@ -11606,12 +11610,6 @@
 <lastmod>2026-09-26</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
-</url>
-<url>
-<loc>https://chat-iraq.com/Forum/staff/</loc>
-<lastmod>2026-09-26</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.2</priority>
 </url>
 <!-- FORUM:END -->
 </urlset>

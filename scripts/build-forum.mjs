@@ -67,7 +67,7 @@ const NAV = [
   ['/contact/', 'اتصل بنا']
 ]
 
-const header = (active) => `  <header class="ds-header"><div class="ds-container ds-nav"><a class="ds-brand" href="${ORIGIN}/"><img src="/assets/brand-logo.webp" srcset="/assets/brand-logo-40.webp 40w, /assets/brand-logo.webp 497w" sizes="34px" alt="" width="34" height="34" loading="lazy">شات عسل تايم</a><nav class="ds-menu" aria-label="القائمة الرئيسية">${NAV.map(
+const header = (active) => `  <header class="ds-header"><div class="ds-container ds-nav"><a class="ds-brand" href="${ORIGIN}/"><img src="/assets/brand-logo.webp" srcset="/assets/brand-logo-40.webp 40w, /assets/brand-logo.webp 497w" sizes="34px" alt="" width="34" height="34" loading="lazy">${D.brand}</a><nav class="ds-menu" aria-label="القائمة الرئيسية">${NAV.map(
   ([href, label]) =>
     `<a href="${abs(href)}"${href === active ? ' class="is-active" aria-current="page"' : ''}>${label}</a>`
 ).join('')}</nav><form class="ds-search-mini" role="search" action="${abs('/search/')}" method="get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg><input type="search" name="q" placeholder="ابحث" aria-label="بحث"></form><a class="ds-cta-mini" href="${ORIGIN}/">دخول</a><button class="ds-theme-btn" type="button" aria-label="تبديل السمة">◐</button><button class="ds-burger" type="button" aria-label="فتح القائمة" aria-expanded="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="14" y2="18"/></svg></button></div></header>
@@ -77,11 +77,12 @@ const header = (active) => `  <header class="ds-header"><div class="ds-container
   ).join('')}</aside>
   <div class="ds-scrim"></div>`
 
-const footer = `  <footer class="ds-footer"><div class="ds-container"><p>شات عسل تايم — <a href="${abs(BASE)}">المنتدى</a> · <a href="${abs('/rules/')}">القوانين</a> · <a href="${abs('/contact/')}">اتصل بنا</a></p></div></footer>
-  <script src="/assets/app.js" defer></script>
-  <script src="/assets/forum-data.js" defer></script>
-  <script src="/Forum/assets/forum.js" defer></script>
-  <script src="/Forum/assets/forum-live.js" defer></script>`
+const footer = `  <footer class="ds-footer"><div class="ds-container"><p>${D.brand} — <a href="${abs(BASE)}">المنتدى</a> · <a href="${abs('/rules/')}">القوانين</a> · <a href="${abs('/contact/')}">اتصل بنا</a></p></div></footer>
+<script src="/assets/app.js" defer></script>
+<script src="/assets/chat-config.js"></script>
+<script src="/assets/forum-data.js" defer></script>
+<script src="/Forum/assets/forum.js" defer></script>
+<script src="/Forum/assets/forum-live.js" defer></script>`
 
 const crumbs = (items) =>
   `  <nav class="ds-crumbs" aria-label="مسار الصفحة">${items
@@ -104,8 +105,8 @@ const breadcrumbLd = (items) => ({
 })
 
 const graphBase = () => [
-  { '@type': 'Organization', '@id': ORG_ID, name: 'شات عسل تايم', url: ORIGIN + '/', logo: { '@type': 'ImageObject', url: ORIGIN + '/assets/brand-logo.webp', width: 512, height: 512, caption: 'شات عسل تايم' }, sameAs: ['https://www.facebook.com/chatiraqi', 'https://x.com/chatiraqi', 'https://www.instagram.com/3asltime'] },
-  { '@type': 'WebSite', '@id': SITE_ID, url: ORIGIN + '/', name: 'شات عسل تايم', inLanguage: 'ar', publisher: { '@id': ORG_ID } }
+  { '@type': 'Organization', '@id': ORG_ID, name: D.brand, url: ORIGIN + '/', logo: { '@type': 'ImageObject', url: ORIGIN + D.logo, width: 512, height: 512, caption: D.brand }, sameAs: D.social },
+  { '@type': 'WebSite', '@id': SITE_ID, url: ORIGIN + '/', name: D.brand, inLanguage: 'ar', publisher: { '@id': ORG_ID } }
 ]
 
 /* ------------------------------------------------------------------ layout */
@@ -124,7 +125,7 @@ function layout({ title, desc, canonical, ogType = 'website', body, crumbItems, 
 <meta name="description" content="${esc(desc)}">
 <meta name="robots" content="${robots}">
 <meta name="google" content="notranslate">
-<meta property="og:site_name" content="شات عسل تايم">
+<meta property="og:site_name" content="${D.brand}">
 <meta property="og:type" content="${ogType}">
 <meta property="og:locale" content="ar_AR">
 <meta property="og:title" content="${esc(title)}">
@@ -143,7 +144,7 @@ ${ld({ '@context': 'https://schema.org', '@graph': [...graphBase(), ...jsonLd] }
     <link rel="stylesheet" href="/assets/site.min.css">
     <link rel="preload" as="style" href="/assets/site-extra.min.css">
     <link rel="stylesheet" href="/assets/site-extra.min.css">
-    <link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="${ACC}"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="شات عسل تايم"></head>
+    <link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="${ACC}"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="${D.brand}"></head>
 <body>
 ${header(active)}
 
@@ -268,7 +269,7 @@ ${topicList(list)}
 )}`
 
   return layout({
-    title: D.title + ' | شات عسل تايم',
+    title: D.title + ' | ' + D.brand,
     desc: D.description,
     canonical: BASE,
     jsonLd: [
@@ -582,6 +583,9 @@ await emit(
 
 /* --------------------------------------------------------------- sitemaps */
 
+/* noindex pages are generated but must never be advertised in a sitemap */
+const NOINDEX = new Set([BASE + 'staff/'])
+
 const pages = [
   { loc: BASE, freq: 'daily', pri: '0.9', img: true },
   ...D.categories.map((c) => ({ loc: catUrl(c.key), freq: 'daily', pri: '0.7' })),
@@ -589,7 +593,7 @@ const pages = [
   ...D.topics.map((t) => ({ loc: topicUrl(t), freq: 'weekly', pri: '0.8' })),
   { loc: BASE + 'ask/', freq: 'monthly', pri: '0.5' },
   { loc: BASE + 'staff/', freq: 'monthly', pri: '0.2' }
-]
+].filter((p) => !NOINDEX.has(p.loc))
 
 const START = '<!-- FORUM:START -->'
 const END = '<!-- FORUM:END -->'
@@ -601,11 +605,15 @@ const block = pages
   )
   .join('\n')
 
-/* sitemap.xml: drop any previous forum block AND the legacy standalone entry,
-   then re-insert. Also repairs the duplicated </urlset>. */
+/* sitemap.xml: drop any previous forum block AND the legacy standalone entry
+   for THIS origin, then re-insert. Also repairs a duplicated </urlset>. */
+const legacyForumEntry = new RegExp(
+  '\\n?<url>\\s*<loc>' + ORIGIN.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\/Forum\\/<\\/loc>[\\s\\S]*?<\\/url>\\n?',
+  'g'
+)
 let xml = await readFile('sitemap.xml', 'utf8')
 xml = xml.replace(new RegExp(`\\n?${START}[\\s\\S]*?${END}\\n?`, 'g'), '\n')
-xml = xml.replace(/\n?<url>\s*<loc>https:\/\/chat-iraq\.com\/Forum\/<\/loc>[\s\S]*?<\/url>\n?/g, '\n')
+xml = xml.replace(legacyForumEntry, '\n')
 xml = xml.replace(/<\/urlset>\s*<\/urlset>\s*$/, '</urlset>')
 xml = xml.replace(/<\/urlset>\s*$/, `\n${START}\n${block}\n${END}\n</urlset>\n`)
 await writeFile('sitemap.xml', xml, 'utf8')
