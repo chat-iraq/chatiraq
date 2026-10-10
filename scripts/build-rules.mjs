@@ -43,7 +43,7 @@ const full = {
     'Do not edit by hand here - edit the two sources and re-run the script,',
     'otherwise the halves drift apart.',
     '',
-    'Both brands (chat-iraq.com, iraqia-chat.com) share this database, so the',
+    'Both brands share this database, so the',
     'forum lives under forum/<roomPrefix>/ and $site must be one of those',
     'prefixes. forum/staff/<uid> is shared: one moderator covers both sites.',
     '',

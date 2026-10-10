@@ -2633,6 +2633,13 @@
 <image:image><image:loc>https://chat-iraq.com/img/rooms/drr-index.jpg</image:loc></image:image>
 </url>
 <url>
+<loc>https://chat-iraq.com/drdsh-drralarab/</loc>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+<image:image><image:loc>https://chat-iraq.com/img/rooms/drralarab.jpg</image:loc></image:image>
+</url>
+<url>
 <loc>https://chat-iraq.com/drralarab/</loc>
 <lastmod>2026-09-25</lastmod>
 <changefreq>daily</changefreq>
@@ -8424,6 +8431,13 @@
 <changefreq>daily</changefreq>
 <priority>0.8</priority>
 <image:image><image:loc>https://chat-iraq.com/img/rooms/drdshty.jpg</image:loc></image:image>
+</url>
+<url>
+<loc>https://chat-iraq.com/drdsh-drraliraq/</loc>
+<lastmod>2026-10-10</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.8</priority>
+<image:image><image:loc>https://chat-iraq.com/img/rooms/drraliraq.jpg</image:loc></image:image>
 </url>
 <url>
 <loc>https://chat-iraq.com/drdsh-drraliraq-taym/</loc>

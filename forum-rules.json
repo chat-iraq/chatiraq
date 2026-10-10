@@ -7,7 +7,7 @@
     "button is not reachable from this session. Merge the `forum` subtree below",
     "into the fixed chat rules, then publish from the Console or the Admin SDK.",
     "",
-    "NAMESPACING: chat-iraq.com and iraqia-chat.com share ONE Firebase project,",
+    "NAMESPACING: chat-iraq.com shares ONE Firebase project,",
     "so every forum path is scoped by roomPrefix. `$site` must be one of the two",
     "known prefixes; `$other` denies anything else, so a client cannot invent a",
     "third namespace. Change $site here if you add another site on this project.",

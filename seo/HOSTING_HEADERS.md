@@ -49,7 +49,7 @@ Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 ## 5. تطبيق بعد رفع هذا الفيديو على repo
 
-1. رفع المستودع إلى GitHub Pages (إعداد `chat-iraq.com`/`iraqia-chat.com` في Custom domain).
+1. رفع المستودع إلى GitHub Pages (إعداد `chat-iraq.com`/`chat-iraq.com` في Custom domain).
 2. ضبط قواعد الرؤوس أعلاه في لوحة CDN.
 3. فحص سريع بعد التطبيق:
    ```

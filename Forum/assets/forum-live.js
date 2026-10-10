@@ -6,7 +6,7 @@
  *
  * Data model (all under the `forum/` root, see forum-rules.json):
  * Every path is namespaced per site by CHAT_FIREBASE.roomPrefix, because
- * chat-iraq.com and iraqia-chat.com share ONE Firebase project. Without
+ * chat-iraq.com and chat-iraq.com share ONE Firebase project. Without
  * this the two brands would read and write each other's threads.
  *
  *   forum/<prefix>/counts/<topicId>          number        reply counter

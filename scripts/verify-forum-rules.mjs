@@ -2,7 +2,7 @@ import { readFileSync, existsSync } from 'node:fs'
 import path from 'node:path'
 const o = JSON.parse(readFileSync(path.join(process.cwd(), 'forum-rules.json'), 'utf8'))
 const r = o.rules.forum
-const NS = r['$site'] /* per-site namespace: chat-iraq=asltime, iraqia-chat=durar */
+const NS = r['$site'] /* per-site namespace: chat-iraq=asltime (legacy prefix: durar) */
 const CATS = ['access', 'tech', 'ban', 'ideas', 'general']
 let bad = 0
 const p = (c, m) => { if (!c) { bad++; console.log('  FAIL ' + m) } }
