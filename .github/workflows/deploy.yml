@@ -36,6 +36,9 @@ jobs:
       - name: Check
         run: npm run check
 
+      - name: Stage static site
+        run: node scripts/stage-static-site.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
