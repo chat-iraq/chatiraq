@@ -3,7 +3,7 @@
   "version": "3.0.0",
   "private": true,
   "type": "module",
-  "description": "ط´ط§طھ ط¹ط³ظ„ طھط§ظٹظ… â€” ظ…ظ†طµط© ط¯ط±ط¯ط´ط© ط¹ط±ط§ظ‚ظٹط© ط­ط¯ظٹط«ط© (React + Vite + Tailwind, Static Export ظ„ظ€ GitHub Pages).",
+  "description": "شات عسل تايم — منصة دردشة عربية حديثة (React + Vite + Tailwind، تصدير ثابت لـ GitHub Pages).",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,6 +15,9 @@
     "sitemap:sync": "node scripts/sync-sitemaps.mjs",
     "stage:static": "node scripts/stage-static-site.mjs",
     "gsc:report": "node scripts/gsc-report.mjs",
+    "amp:build": "node scripts/build-amp.mjs --write",
+    "seo:audit": "node scripts/seo-audit.mjs",
+    "seo:breadcrumbs": "node scripts/patch-breadcrumbs.mjs --write",
     "forum:build": "node scripts/build-forum.mjs",
     "forum:all": "npm run forum:promote && npm run forum:build && npm run forum:nav && npm run forum:rules && npm run forum:verify",
     "forum:promote": "node scripts/promote-topic.mjs",

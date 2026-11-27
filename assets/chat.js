@@ -107,7 +107,6 @@
     link.href = '/assets/chat.css';
     document.head.appendChild(link);
   }
-  ensureChatCss();
 
   /* ───────── البروفايل المحلي ───────── */
   var DEFAULT_AV = Math.floor(Math.random() * AVA_GRADS.length);
@@ -961,6 +960,12 @@ if (ch.key === myKey) return;
         row('دخل منذ', fmtClock(joined));
         row('الحالة', isMe ? 'متصل الآن' : ((m && Object.prototype.hasOwnProperty.call(m, 'n')) ? 'متصل الآن' : 'غير معروف'));
         body.appendChild(rows);
+
+        var guide = document.createElement('a');
+        guide.href = '/profile/';
+        guide.textContent = 'دليل الملف الشخصي والخصوصية';
+        guide.className = 'pxc-profile-guide';
+        body.appendChild(guide);
 
         if (!isMe && m && m.u && m.u !== authUid) {
           var bwrap = document.createElement('div');
