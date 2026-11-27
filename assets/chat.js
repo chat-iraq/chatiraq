@@ -164,6 +164,7 @@
 
   /* ═══════════════ التطبيق ═══════════════ */
   function openChat(nick) {
+    ensureChatCss();
     var root = document.createElement('div');
     root.className = 'pxc';
     root.innerHTML =
