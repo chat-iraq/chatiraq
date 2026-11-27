@@ -19,6 +19,7 @@
     "dardasha:build": "node scripts/build-dardasha-pages.mjs --write",
     "titles:align": "node scripts/align-dardasha-titles.mjs --write",
     "titles:audit": "node scripts/title-audit.mjs",
+    "top:boost": "node scripts/boost-top-pages.mjs --write",
     "perf:optimize": "node scripts/optimize-performance.mjs --write",
     "seo:audit": "node scripts/seo-audit.mjs",
     "seo:breadcrumbs": "node scripts/patch-breadcrumbs.mjs --write",
