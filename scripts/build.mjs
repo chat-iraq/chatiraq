@@ -23,7 +23,7 @@ const check = (url) => {
   const file = path || 'index.html';
   const variants = [file];
   if (path && !/\.(html?|xml|jpg|jpeg|png|webp|avif|gif|svg|css|js|woff2?|txt|json|py|mjs)$/.test(path)) {
-    variants.push(path + '.html', path.replace(/\/$/, '') + '/index.html');
+    variants.push(path + '.html', path.replace(/\/$/, '') + '/index.html', path.replace(/\/$/, '') + '/index.htm');
   }
   if (!variants.some((v) => existsSync(join(ROOT, v)))) {
     missing.push(`${url} -> ${file}`);

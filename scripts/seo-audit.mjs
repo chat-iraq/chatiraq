@@ -13,6 +13,7 @@ const report = {
   missingBreadcrumbSchema: [],
   missingVisibleBreadcrumb: [],
   noindexInSitemap: [],
+  nofollowInSitemap: [],
   duplicateLoc: [],
 };
 const seen = new Set();
@@ -21,8 +22,9 @@ for (const url of urls) {
   if (seen.has(url)) report.duplicateLoc.push(url);
   seen.add(url);
   const pathname = new URL(url).pathname;
-  const file = `${root}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}/index.html`;
-  if (!fs.existsSync(file)) {
+  const dir = `${root}${pathname === '/' ? '/' : pathname.replace(/\/$/, '')}`;
+  const file = ['index.html', 'index.htm'].map((name) => `${dir}/${name}`).find((candidate) => fs.existsSync(candidate));
+  if (!file) {
     report.missingFile.push(url);
     continue;
   }
@@ -36,6 +38,7 @@ for (const url of urls) {
   const hasBreadcrumbSchema = /BreadcrumbList/.test(jsonLd);
   const hasVisibleBreadcrumb = /(class|id)=["'][^"']*crumb/i.test(html);
   const hasNoindex = /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*noindex/i.test(html);
+  const hasNofollow = /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*nofollow/i.test(html);
 
   const canonicalIsIntentional = url.includes('/amp/') || url === 'https://chat-iraq.com/drdsh-drraliraq-taym/';
   if (!canonical) report.missingCanonical.push(url);
@@ -45,6 +48,7 @@ for (const url of urls) {
   if (!hasBreadcrumbSchema) report.missingBreadcrumbSchema.push(url);
   if (!hasVisibleBreadcrumb) report.missingVisibleBreadcrumb.push(url);
   if (hasNoindex) report.noindexInSitemap.push(url);
+  if (hasNofollow) report.nofollowInSitemap.push(url);
 }
 
 console.log(`sitemap URLs: ${report.urls}`);
