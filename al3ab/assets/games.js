@@ -126,10 +126,11 @@
     if (!msgsRef || !myUid) return;
     var msg = { n: myNick || 'زائر', u: myUid, ts: Date.now(), k: kind, t: '' };
     if (kind === 'signal') {
-      /* وصف WebRTC قد يتجاوز 2000 حرف في t؛ قواعد الشات تسمح بـ c بدون حد طول. */
+      /* وصف WebRTC قد يتجاوز 2000 حرف في t؛ قواعد الشات تسمح بـ a/c فقط كحقول إضافية،
+         لذلك يُغلَّف المستلم داخل c ولا يُضاف حقل to مستقل وإلا رفضت القواعد الرسالة. */
       var sig = payload || {};
       msg.a = String(sig.type || '');
-      msg.c = JSON.stringify(sig.data || {});
+      msg.c = JSON.stringify({ to: sig.to || '', d: sig.data || {} });
       msg.t = 'signal';
     } else {
       var text = typeof payload === 'string' ? payload : JSON.stringify(payload);
@@ -181,7 +182,7 @@
     myNick = cleanName($('#agNick') && $('#agNick').value);
     if (myNick.length < 2) { toast('اكتب اسماً مستعاراً أولاً.'); return; }
     joinRoom(code);
-    send('sys', 'create', { g: 'lobby' });
+    send('sys', 'create');
     hostUid = myUid;
     state = { v: 1, u: myUid, phase: 'lobby', game: selectedGame, host: myUid, players: [] };
     send('state', state);
@@ -244,7 +245,7 @@
       return;
     }
     if (m.k === 'chat') { appendChat(m); return; }
-    if (m.k === 'signal') { onSignal(m.u, m.a, m.c, m.to); return; }
+    if (m.k === 'signal') { onSignal(m.u, m.a, m.c); return; }
   }
   function leaveRoom() {
     if (presRef) presRef.child(myTab).remove();
@@ -677,7 +678,7 @@
   /* ─────────Chat ───────── */
   function appendChat(m) {
     var box = $('#agChatList'); if (!box) return;
-    if (blocked[m.u]) return;
+    if (blocked[m.u] || blocked[m.n] || (players[m.u] && blocked[players[m.u].n])) return;
     var row = el('div', 'ag-msg');
     var head = el('div', 'ag-msg-head');
     head.appendChild(el('strong', '', m.n || 'زائر'));
@@ -764,11 +765,13 @@
       .then(function () { sendSignal(uid, 'offer', { s: pc.localDescription }); })
       .catch(function () { toast('تعذّر بدء اتصال الصوت مع أحد الأعضاء.'); });
   }
-  function sendSignal(to, type, data) { send('signal', { type: type, data: data }, { to: to }); }
-  function onSignal(uid, type, payload, to) {
-    if (!uid || to !== myUid || uid === myUid || !voice.on) return;
-    var data = {};
-    try { data = JSON.parse(payload || '{}'); } catch (e) { return; }
+  function sendSignal(to, type, data) { send('signal', { type: type, to: to, data: data }); }
+  function onSignal(uid, type, payload) {
+    if (!uid || uid === myUid || !voice.on) return;
+    var env = {}, data = {};
+    try { env = JSON.parse(payload || '{}'); } catch (e) { return; }
+    if (env.to !== myUid) return;
+    data = env.d || {};
     var pc = voice.pcs[uid] || makePeer(uid, false);
     if (type === 'offer') {
       pc.setRemoteDescription(data.s).then(function () {

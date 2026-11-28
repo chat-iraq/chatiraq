@@ -49,7 +49,10 @@ check(/id="agChatForm"/.test(page) && /id="agVoiceBtn"/.test(page), 'الدرد�
 check(/src="\/al3ab\/assets\/games-data\.js"/.test(page) && /src="\/al3ab\/assets\/games\.js"/.test(page), 'ملفا البيانات والمنطق محمّلان في الصفحة');
 
 /* استخدام قواعد Firebase الحالية بأمان */
-check(/msg\.a = String\(sig\.type/.test(logic) && /msg\.c = JSON\.stringify\(sig\.data/.test(logic), 'إشارات الصوت تستخدم c/a المتاحين في قواعد الشات بدل تجاوز حد t');
+check(/msg\.a = String\(sig\.type/.test(logic) && /msg\.c = JSON\.stringify\(\{ to: sig\.to/.test(logic), 'إشارات الصوت تستخدم c/a المتاحين في قواعد الشات بدل تجاوز حد t');
+check(!/\bmsg\.to\b/.test(logic) && !/send\('sys', 'create',/.test(logic), 'لا تُكتب حقول غير مسموحة في قواعد Firebase');
+check(/blocked\[m\.u\] \|\| blocked\[m\.n\]/.test(logic), 'حجب العضو يعمل بالاسم أو المعرّف');
+check(/id="agTry-hangman"/.test(page) && /id="agTry-riddles"/.test(page) && /id="agTry-words"/.test(page), 'نسخة تجريبية فردية تعمل قبل الدخول لغرفة');
 check(/next\.u = myUid/.test(logic) && /s\.u === m\.u/.test(logic), 'حالة اللعبة موقّعة بمعرّف المضيف ومتحقّق منها عند الاستقبال');
 check(/function resolveHost/.test(logic), 'انتقال المضيف عند مغادرة صاحب الغرفة');
 
