@@ -501,7 +501,11 @@
       msg.textContent = wrong >= max ? ('انتهت المحاولات — الكلمة: ' + word) :
         (letters.every(function (c) { return guessed[c]; }) ? ('أحسنت! الكلمة: ' + word) : ('الأخطاء: ' + wrong + ' / ' + max));
     }
-    'ابجد هوز حطي كلمن سعفص قرشت ثخذ ضظغ'.split('').forEach(function (ch) {
+    /* لوحة المفاتيح يجب أن تغطي حروف اليوم أيضاً (ة، ء، ى…) وإلا تعذّر حل الكلمة. */
+    var keyset = {};
+    'ابتثجحخدذرزسشصضطظعغفقكلمنهويىةءؤئ'.split('').forEach(function (ch) { keyset[ch] = 1; });
+    letters.forEach(function (ch) { keyset[ch] = 1; });
+    Object.keys(keyset).forEach(function (ch) {
       var b = el('button', 'ag-key', ch);
       b.onclick = function () {
         if (guessed[ch] || wrong >= max) return;
@@ -567,9 +571,9 @@
     }, 1000);
   }
   function shareResult(text) {
-    var input = $('#agChatInput');
-    if (input) { input.value = text; input.focus(); }
-    else toast(text);
+    var room = $('#agRoom'), input = $('#agChatInput');
+    if (room && !room.hidden && input) { input.value = text; input.focus(); }
+    else toast(text + ' — انضم لغرفة لإرسالها في الدردشة.');
   }
 
   /* ─────────Host move handling ───────── */

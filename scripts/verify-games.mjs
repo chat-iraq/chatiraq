@@ -55,6 +55,7 @@ check(/msg\.a = String\(sig\.type/.test(logic) && /msg\.c = JSON\.stringify\(\{ 
 check(!/\bmsg\.to\b/.test(logic) && !/send\('sys', 'create',/.test(logic), 'لا تُكتب حقول غير مسموحة في قواعد Firebase');
 check(/blocked\[m\.u\] \|\| blocked\[m\.n\]/.test(logic), 'حجب العضو يعمل بالاسم أو المعرّف');
 check(/id="agTry-hangman"/.test(page) && /id="agTry-riddles"/.test(page) && /id="agTry-words"/.test(page), 'نسخة تجريبية فردية تعمل قبل الدخول لغرفة');
+check(/letters\.forEach\(function \(ch\) \{ keyset\[ch\] = 1; \}\)/.test(logic), 'لوحة حروف خمّن الكلمة تغطي حروف كل كلمة مهما احتوت على ة أو ء');
 check(/next\.u = myUid/.test(logic) && /s\.u === m\.u/.test(logic), 'حالة اللعبة موقّعة بمعرّف المضيف ومتحقّق منها عند الاستقبال');
 check(/function resolveHost/.test(logic), 'انتقال المضيف عند مغادرة صاحب الغرفة');
 
