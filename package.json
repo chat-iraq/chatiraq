@@ -11,7 +11,7 @@
     "forum": "npm run forum:build && npm run forum:verify",
     "forum:nav": "node scripts/patch-forum-nav.mjs --write",
     "forum:verify": "node scripts/verify-forum.mjs && node scripts/verify-forum-rules.mjs && node scripts/verify-forum-links.mjs",
-    "check": "npm run build && node scripts/check.mjs && node scripts/build.mjs && node scripts/verify-brand.mjs && node scripts/verify-lazy-chat.mjs && npm run forum:verify && npm run games:verify",
+    "check": "npm run build && node scripts/check.mjs && node scripts/build.mjs && node scripts/verify-brand.mjs && node scripts/verify-lazy-chat.mjs && node scripts/verify-iraq-section.mjs && npm run forum:verify && npm run games:verify",
     "sitemap:sync": "node scripts/sync-sitemaps.mjs",
     "stage:static": "node scripts/stage-static-site.mjs",
     "gsc:report": "node scripts/gsc-report.mjs",
