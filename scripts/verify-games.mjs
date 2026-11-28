@@ -36,6 +36,8 @@ if (data) {
   check((L.safe || []).every((i) => Number.isInteger(i) && i >= 0 && i < 52), 'الخانات الآمنة داخل المسار');
   check((L.yard || []).length === 4 && L.yard.every((y) => y.length === 4), 'أربع ساحات لكل لاعب أربع قطع');
   check((L.homeCells || []).length === 4 && L.homeCells.every((h) => h.length === 6), 'أربعة مسارات منزل بست خانات');
+  const adjacent = (a, b) => Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) === 1;
+  check(L.homeCells.every((h, i) => adjacent(cells[L.homeEntry[i]], h[0]) && adjacent(h[5], [7, 7])), 'مسارات المنزل متصلة بمداخلها وبالمركز');
 }
 
 /* ربط الواجهة */
