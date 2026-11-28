@@ -266,5 +266,5 @@
 
 ### ج) حدود لا تتجاوزها الخطة
 - التسجيل الرسمي للعلامة يحتاج هوية المالك وتوقيعه ورسومه لدى `tm.industry.gov.iq`، ثم مدريد عبر WIPO بعد القبول الوطني. لا ادّعاء بأن العلامة مسجّلة اليوم.
-- لا تُضاف صفحة `facebook.com/3asltime/` إلى `sameAs` قبل تأكيد المالك لها؛ الحسابات المستخدمة هي `facebook.com/chatiraqi` و`x.com/chatiraqi` و`instagram.com/3asltime` الموجودة أصلاً في `data/forum.json`.
+- أكّد المالك ملكية `facebook.com/3asltime/` و`instagram.com/3asltime`، فأُضيف حساب فيسبوك إلى `sameAs` وأصبح رابط التذييل المرئي؛ الحسابات المستخدمة هي `facebook.com/3asltime/` و`facebook.com/chatiraqi` و`x.com/chatiraqi` و`instagram.com/3asltime` في `data/forum.json`.
 - لا وعد بأرقام CWV أو بمركز أول قبل القياس الميداني والنشر.

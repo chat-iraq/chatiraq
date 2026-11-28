@@ -20,7 +20,8 @@ check(brand.includes('web.archive.org/web/20190601092108') && brand.includes('rd
 check(brand.includes('الاسم السابق ليس الاسم الرسمي الحالي') && brand.includes('دردشة العراق'), '«شات العراق» موثّق كاسم سابق و«دردشة العراق» كلمة بحث لا اسم علامة');
 check(brand.includes('كلمتان تصفان الخدمة، وليستا جزءاً من اسم العلامة'), '«شات» و«دردشة» مُعرّفتان كوصف للخدمة لا كاسم علامة');
 check(brand.includes('"@type":"Organization","@id":"https://chat-iraq.com/#organization","name":"عسل تايم"') && !brand.includes('"name":"شات عسل تايم"'), 'Organization.name هو «عسل تايم» فقط');
-check(brand.includes('https://www.facebook.com/chatiraqi') && brand.includes('https://www.instagram.com/3asltime'), 'sameAs يستخدم الحسابات الرسمية المعتمدة');
+check(brand.includes('https://www.facebook.com/3asltime/') && brand.includes('https://www.facebook.com/chatiraqi') && brand.includes('https://www.instagram.com/3asltime'), 'sameAs يستخدم الحسابات الرسمية المعتمدة بما فيها فيسبوك 3asltime');
+check(JSON.parse(read('data/forum.json')).social.includes('https://www.facebook.com/3asltime/'), 'حساب فيسبوك المملوك موجود في مصدر البيانات');
 check(brand.includes('https://chat-iraq.com/search/?q={search_term_string}'), 'SearchAction يطابق مسار البحث الفعلي');
 check(/BreadcrumbList/.test(brand) && /class="ds-crumbs/.test(brand), 'مسار تنقل مرئي ومخطط في صفحة العلامة');
 check(brand.includes('rel="alternate" type="text/markdown"'), 'رابط النسخة Markdown معلن في الصفحة');
@@ -52,6 +53,7 @@ check(dossier.includes('tm.industry.gov.iq') && dossier.includes('2019-06-01'), 
 check(dossier.includes('لا أستطيع'), 'ملف التسجيل يوضح حدود التفويض القانوني');
 check(dossier.includes('لماذا لا نُحوّل البراند إلى «شات العراق»؟') && dossier.includes('48.11'), 'قرار عدم تثبيت الاسم العام مدعوم ببيانات GSC');
 check(dossier.includes('اسم العلامة المطلوب تثبيته وتسجيله: «عسل تايم» وحدها'), 'ملف التسجيل يثبّت «عسل تايم» دون «شات»');
+check(dossier.includes('أكّد المالك في 2026-11-28') && dossier.includes('facebook.com/3asltime'), 'ملف التسجيل يسجّل تأكيد ملكية حساب 3asltime');
 
 const chatJs = read('assets/chat.js');
 check(chatJs.includes('function privacyRisks') && chatJs.includes('مساعد الأمان'), 'مساعد الأمان الذكي مدمج في الدردشة الكتابية');
@@ -94,6 +96,8 @@ let staleEncodedShares = 0;
 let wrongHeaderBrand = 0;
 let wrongFooterBrand = 0;
 let wrongCopyright = 0;
+let missingOwnedSocial = 0;
+let staleFacebookLink = 0;
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   if (html.includes('https://chat-iraq.com/search?q={search_term_string}')) staleSearch += 1;
@@ -104,7 +108,9 @@ for (const file of files) {
     const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
     if (types.includes('Organization') && node.name !== BRAND_NAME) wrongOrgNames += 1;
     if (types.includes('WebSite') && node.name && node.name !== BRAND_NAME) wrongWebNames += 1;
+    if (types.includes('Organization') && Array.isArray(node.sameAs) && !node.sameAs.includes('https://www.facebook.com/3asltime/')) missingOwnedSocial += 1;
   }
+  if (/href=["']https:\/\/www\.facebook\.com\/chatiraqi["']/.test(html)) staleFacebookLink += 1;
   if (/property="og:site_name" content="(?!عسل تايم")/.test(html)) staleOgNames += 1;
   if (/\| شات (?:عسل تايم|درر العرب)/.test(html)) staleSuffixes += 1;
   if (html.includes('شات درر العرب')) staleNetworkMentions += 1;
@@ -126,6 +132,8 @@ check(staleEncodedShares === 0, 'روابط المشاركة لا تحمل ال�
 check(wrongHeaderBrand === 0, 'شعار الترويسة يعرض «عسل تايم»');
 check(wrongFooterBrand === 0, 'شعار التذييل يعرض «عسل تايم»');
 check(wrongCopyright === 0, 'حقوق النشر باسم «عسل تايم»');
+check(missingOwnedSocial === 0, 'كل كيان Organization يذكر فيسبوك 3asltime في sameAs');
+check(staleFacebookLink === 0, 'لا رابط تذييل قديم إلى facebook.com/chatiraqi');
 
 console.log(`\nBRAND/AI CHECKS: ${passed} PASS, ${failed} FAIL`);
 process.exit(failed ? 1 : 0);
