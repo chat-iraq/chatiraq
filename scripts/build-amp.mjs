@@ -27,7 +27,7 @@ const pages = [
     canonical: 'https://chat-iraq.com/articles/kayf-tahmi-hsabak-fi-ghurfat-al-dardasha/',
     ampUrl: 'https://chat-iraq.com/articles/kayf-tahmi-hsabak-fi-ghurfat-al-dardasha/amp/',
     name: 'حماية الحساب في الدردشة',
-    title: 'كيف تحمي حسابك في غرف الدردشة | شات عسل تايم',
+    title: 'كيف تحمي حسابك في غرف الدردشة | عسل تايم',
     description: 'خطوات عملية لحماية حسابك وخصوصيتك داخل غرف الدردشة، من الاسم المستعار إلى رمز التحقق.',
     sections: [
       ['ابدأ باسم مستعار', '<p>لا تكتب اسمك الحقيقي أو رقم هاتفك أو مدرستك في الاسم المعروض أو الحالة. اسم بسيط غير دالّ يحفظ هويتك.</p>'],
@@ -42,7 +42,7 @@ const pages = [
     canonical: 'https://chat-iraq.com/articles/kayf-takhtar-ghurfat-al-dardasha-al-munasibah/',
     ampUrl: 'https://chat-iraq.com/articles/kayf-takhtar-ghurfat-al-dardasha-al-munasibah/amp/',
     name: 'اختيار غرفة الدردشة المناسبة',
-    title: 'كيف تختار غرفة دردشة مناسبة | شات عسل تايم',
+    title: 'كيف تختار غرفة دردشة مناسبة | عسل تايم',
     description: 'طريقة بسيطة لاختيار غرفة دردشة تناسب لهجتك وهدفك قبل الدخول.',
     sections: [
       ['حدّد الهدف', '<p>هل تريد سوالف يومية، تعارفاً، أم نقاشاً هادئاً؟ تحديد الهدف يقلل الضياع بين الغرف.</p>'],
@@ -56,7 +56,7 @@ const pages = [
     canonical: 'https://chat-iraq.com/articles/alamat-ghurfat-al-dardasha-al-jayidah/',
     ampUrl: 'https://chat-iraq.com/articles/alamat-ghurfat-al-dardasha-al-jayidah/amp/',
     name: 'علامات غرفة الدردشة الجيدة',
-    title: 'علامات غرفة الدردشة الجيدة | شات عسل تايم',
+    title: 'علامات غرفة الدردشة الجيدة | عسل تايم',
     description: 'كيف تعرف أن غرفة الدردشة مناسبة وآمنة قبل أن تبدأ المشاركة.',
     sections: [
       ['وصف واضح', '<p>الغرفة الجيدة تشرح موضوعها بلغة مفهومة، ولا تعتمد على عناوين مضللة.</p>'],
@@ -70,7 +70,7 @@ const pages = [
     canonical: 'https://chat-iraq.com/articles/kayf-tadamin-khususiyatak-fi-al-shat/',
     ampUrl: 'https://chat-iraq.com/articles/kayf-tadamin-khususiyatak-fi-al-shat/amp/',
     name: 'خصوصيتك في الشات',
-    title: 'كيف تحافظ على خصوصيتك في الشات | شات عسل تايم',
+    title: 'كيف تحافظ على خصوصيتك في الشات | عسل تايم',
     description: 'قواعد قصيرة ومفيدة للحفاظ على خصوصيتك أثناء الدردشة العربية.',
     sections: [
       ['لا تشارك التفاصيل', '<p>تجنّب كتابة العنوان أو المدرسة أو رقم الهاتف أو اسم العائلة في الرسائل.</p>'],
@@ -84,7 +84,7 @@ const pages = [
     canonical: 'https://chat-iraq.com/articles/kayf-tataamal-maa-al-mutaharrishin/',
     ampUrl: 'https://chat-iraq.com/articles/kayf-tataamal-maa-al-mutaharrishin/amp/',
     name: 'التعامل مع المتحرشين',
-    title: 'كيف تتعامل مع المتحرشين في الدردشة | شات عسل تايم',
+    title: 'كيف تتعامل مع المتحرشين في الدردشة | عسل تايم',
     description: 'خطوات هادئة وعملية للتعامل مع التحرش في غرف الدردشة وحماية نفسك.',
     sections: [
       ['لا تردّ على الاستفزاز', '<p>الرد الطويل يعطي الطرف الآخر فرصة للاستمرار. اقطع الحوار بسرعة.</p>'],
@@ -120,10 +120,10 @@ ${boilerplate}
 <script type="application/ld+json">${breadcrumb}</script>
 </head>
 <body>
-<header><amp-img src="/assets/brand-logo.webp" width="34" height="34" layout="fixed" alt=""></amp-img><a href="https://chat-iraq.com/">شات عسل تايم</a></header>
+<header><amp-img src="/assets/brand-logo.webp" width="34" height="34" layout="fixed" alt=""></amp-img><a href="https://chat-iraq.com/">عسل تايم</a></header>
 <nav class="crumbs"><a href="https://chat-iraq.com/">الرئيسية</a> / <a href="https://chat-iraq.com/dardasha/">دليل الدردشة</a> / ${page.name}</nav>
 <main><h1>${page.title}</h1>${body}<section><p><a href="${page.canonical}">افتح النسخة الكاملة</a> · <a href="https://chat-iraq.com/dardasha/">دليل الدردشة</a></p></section></main>
-<footer>شات عسل تايم — دردشة عربية من الجوال.</footer>
+<footer>عسل تايم — دردشة عربية من الجوال.</footer>
 </body>
 </html>
 `;

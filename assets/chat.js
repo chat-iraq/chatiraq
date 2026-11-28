@@ -1,4 +1,4 @@
-/* شات احترافي v2 — شات عسل تايم / درر العرب
+/* شات احترافي v2 — عسل تايم / درر العرب
    يعمل على صفحات ثابتة دون خادم: Firebase RTDB (رسائل + حضور) + Firebase Storage (صور).
    يتم حقن ورقة الأنماط chat.css تلقائيًا. لا يتطلب تعديل HTML. */
 (function () {
@@ -58,7 +58,7 @@
   function roomTitle() {
     var h = qs('.px-hero h1') || qs('h1');
     if (h && h.textContent.trim()) return h.textContent.trim().slice(0, 40);
-    return document.title.replace(/\s*[-|]\s*شات عسل تايم\s*$/i, '').replace(/\s*[-|]\s*درر العرب\s*$/i, '').trim() || 'الغرفة';
+    return document.title.replace(/\s*[-|]\s*(?:شات |دردشة )?عسل تايم\s*$/i, '').replace(/\s*[-|]\s*درر العرب\s*$/i, '').trim() || 'الغرفة';
   }
   function roomDesc() {
     var d = qs('meta[name="description"]');
@@ -1534,10 +1534,43 @@ if (ch.key === myKey) return;
       if (editChip) editChip.hidden = true;
     }
 
+    /* ───────── مساعد الأمان الذكي: فحص محلي داخل المتصفح، دون إرسال أي بيانات ───────── */
+    function privacyRisks(text) {
+      var risks = [];
+      var s = String(text || '');
+      if (/(?:\+?\d[\d\s\-()]{8,}\d)/.test(s)) risks.push('رقم هاتف أو سلسلة أرقام طويلة');
+      if (/[\w.+-]+@[\w-]+\.[\w.]{2,}/.test(s)) risks.push('بريد إلكتروني');
+      if (/(كلمة.?المرور|كلمه.?المرور|باسو?رد|password|رمز.?التحقق|كود.?التحقق|كود.?الدخول|otp|verify code)/i.test(s)) risks.push('كلمة مرور أو رمز تحقق');
+      if (/https?:\/\/|www\./i.test(s)) risks.push('رابط خارجي');
+      return risks;
+    }
+    var aiHint = null;
+    try {
+      aiHint = document.createElement('div');
+      aiHint.className = 'pxc-ai-hint';
+      aiHint.setAttribute('role', 'status');
+      aiHint.hidden = true;
+      var composer = field.closest('.pxc-composer') || field.parentNode;
+      if (composer) composer.appendChild(aiHint);
+      if (!document.getElementById('pxc-ai-hint-style')) {
+        var aiStyle = document.createElement('style');
+        aiStyle.id = 'pxc-ai-hint-style';
+        aiStyle.textContent = '.pxc-ai-hint{margin:6px 2px 0;padding:7px 10px;border-radius:8px;background:rgba(176,32,80,.09);color:#9b1c49;font-size:.82rem;line-height:1.6}.pxc-ai-hint[hidden]{display:none}';
+        document.head.appendChild(aiStyle);
+      }
+      field.addEventListener('input', function () {
+        var risks = privacyRisks(field.value);
+        aiHint.hidden = !risks.length;
+        aiHint.textContent = risks.length ? 'مساعد الأمان: رسالتك تحتوي على ' + risks.join('، ') + '؛ لا تشاركها داخل الدردشة.' : '';
+      });
+    } catch (e) { aiHint = null; }
+
     function doSend() {
       if (send.disabled) return;
       var text = cleanMsg(field.value);
       if (!text) return;
+      var risks = privacyRisks(text);
+      if (risks.length && !window.confirm('تنبيه من مساعد الأمان في عسل تايم:\nرسالتك تحتوي على ' + risks.join('، ') + '.\nلا تشارك كلمات المرور أو رموز التحقق أو بياناتك الخاصة مع أي عضو.\nهل تريد الإرسال مع ذلك؟')) return;
       stopTyping();
       if (editingKey) {
         var upd = { t: text, ed: 1, edt: Date.now() };

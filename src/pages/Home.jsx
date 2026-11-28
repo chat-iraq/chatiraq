@@ -40,7 +40,7 @@ const steps = [
 
 export default function Home() {
   useSeo({
-    title: 'شات عسل تايم',
+    title: 'دردشة عراقية مجانية',
     description:
       'أفضل منصة دردشة عراقية مجانية بلا تسجيل. غرف للتعارف والحوار من كل المحافظات، سريعة وآمنة ومباشرة.',
     path: '/',

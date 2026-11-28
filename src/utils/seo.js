@@ -22,7 +22,7 @@ function setMeta(attr, id, value) {
  * @param {{ title?: string; description?: string; path?: string; image?: string }} opts
  */
 export function applySeo({ title, description, path = '/', image = '/og-image.svg' }) {
-  const full = title ? `${title} | شات عسل تايم` : 'شات عسل تايم | دردشة عراقية مجانية'
+  const full = title ? `${title} | عسل تايم` : 'دردشة عربية | عسل تايم'
   const url = `${DOMAIN}${path}`
 
   document.title = full
@@ -66,7 +66,7 @@ export function injectRoomSchema(room) {
     about: tags,
     publisher: {
       '@type': 'Organization',
-      name: 'شات عسل تايم',
+      name: 'عسل تايم',
       url: DOMAIN,
     },
   })

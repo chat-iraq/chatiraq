@@ -15,7 +15,7 @@ export default function About() {
   useSeo({
     title: 'من نحن',
     description:
-      'تعرف على شات عسل تايم: منصة دردشة عراقية مجانية تهدف إلى تقريب الشباب والبنات من كل المحافظات في حوار آمن ومحترم.',
+      'تعرف على عسل تايم: منصة دردشة عراقية مجانية تهدف إلى تقريب الشباب والبنات من كل المحافظات في حوار آمن ومحترم.',
     path: '/about',
   })
 
@@ -25,7 +25,7 @@ export default function About() {
         <SectionTitle kicker="قصتنا" title="ماذا نعني بعسل تايم؟" />
         <div className="space-y-4 text-base leading-relaxed text-slate-300">
           <p>
-            وُلد <strong className="text-brand-300">«شات عسل تايم»</strong> من فكرة بسيطة: العراقيون
+            وُلد <strong className="text-brand-300">«عسل تايم»</strong> من فكرة بسيطة: العراقيون
             أهل سوالف وحكايات وأنس، ويستحقون مكاناً يجمعهم بلا حدود ولا تسجيل ولا تعقيد.
           </p>
           <p>

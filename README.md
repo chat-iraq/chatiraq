@@ -1,4 +1,4 @@
-# شات عسل تايم 🍯
+# عسل تايم 🍯
 
 > منصة دردشة عراقية مجانية — إعادة بناء كاملة (v3) بـ **React + Vite + Tailwind CSS** مع تصدير ثابت متوافق مع GitHub Pages.
 
@@ -68,4 +68,4 @@ npm run check
 يتحقق من: `lang=ar`/`dir=rtl`، وسوم `content-language`/`og:locale=ar_IQ`، الـ Schema، canonical، `robots.txt`، `sitemap.xml`، `404.html`، وغياب أي كود مؤقت (TODO/placeholder).
 
 ---
-© شات عسل تايم — جميع الحقوق محفوظة.
+© عسل تايم — جميع الحقوق محفوظة.

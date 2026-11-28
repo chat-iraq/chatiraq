@@ -3,5 +3,26 @@ Allow: /
 Disallow: /seo/
 Disallow: /scripts/
 Disallow: /admin/
+
+# زواحف البحث والإجابة في مساعدات الذكاء الاصطناعي: مسموح بها على المحتوى العام.
+# المصدر: توثيق OpenAI وAnthropic وPerplexity وGoogle للزواحف.
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Google-Extended
+Allow: /
+Disallow: /seo/
+Disallow: /scripts/
+Disallow: /admin/
+
+# استخدام المحتوى لتدريب النماذج الأساسية ليس مفعّلاً لهذه العلامة.
+
+User-agent: GPTBot
+User-agent: ClaudeBot
+Disallow: /
+
 Sitemap: https://chat-iraq.com/sitemap.xml
 Sitemap: https://chat-iraq.com/sitemap.txt

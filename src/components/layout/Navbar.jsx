@@ -16,7 +16,7 @@ export function Navbar() {
 
   return (
     <nav aria-label="التنقل الرئيسي" className="container-px flex h-16 items-center justify-between gap-4">
-      <NavLink to="/" className="flex items-center gap-2.5" aria-label="شات عسل تايم — الرئيسية">
+      <NavLink to="/" className="flex items-center gap-2.5" aria-label="عسل تايم — الرئيسية">
         <img src="/favicon.svg" alt="" width="36" height="36" className="h-9 w-9" />
         <span className="font-display text-lg font-bold text-slate-50">
           عسل <span className="text-brand-400">تايم</span>
