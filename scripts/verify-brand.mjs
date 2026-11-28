@@ -57,6 +57,22 @@ const chatJs = read('assets/chat.js');
 check(chatJs.includes('function privacyRisks') && chatJs.includes('مساعد الأمان'), 'مساعد الأمان الذكي مدمج في الدردشة الكتابية');
 check(chatJs.includes('window.confirm('), 'تحذير الإرسال يطلب تأكيداً صريحاً');
 
+const BRAND_NAME = 'عسل تايم';
+function jsonLdNodes(html) {
+  const nodes = [];
+  for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    let data;
+    try { data = JSON.parse(m[1]); } catch { continue; }
+    const stack = [data];
+    while (stack.length) {
+      const n = stack.pop();
+      if (Array.isArray(n)) { stack.push(...n); continue; }
+      if (n && typeof n === 'object') { nodes.push(n); stack.push(...Object.values(n)); }
+    }
+  }
+  return nodes;
+}
+
 const skipDirs = new Set(['node_modules', 'dist', '.git', 'seo', 'scripts', 'src', 'public', '.github']);
 const files = [];
 (function walk(dir) {
@@ -69,20 +85,47 @@ let staleSearch = 0;
 let staleTool = 0;
 let enrichedTools = 0;
 let orgNames = 0;
-let staleOrgNames = 0;
+let wrongOrgNames = 0;
+let wrongWebNames = 0;
+let staleOgNames = 0;
+let staleSuffixes = 0;
+let staleNetworkMentions = 0;
+let staleEncodedShares = 0;
+let wrongHeaderBrand = 0;
+let wrongFooterBrand = 0;
+let wrongCopyright = 0;
 for (const file of files) {
   const html = fs.readFileSync(file, 'utf8');
   if (html.includes('https://chat-iraq.com/search?q={search_term_string}')) staleSearch += 1;
   if (html.includes('name:"search_site"') && !html.includes('name:"brand_info"')) staleTool += 1;
   if (html.includes('name:"brand_info"')) enrichedTools += 1;
   if (html.includes('"@type":"Organization","@id":"https://chat-iraq.com/#organization","name":"عسل تايم"')) orgNames += 1;
-  if (/"@type":"(?:Organization|WebSite)",[^}]*?"name":"شات عسل تايم"/.test(html)) staleOrgNames += 1;
+  for (const node of jsonLdNodes(html)) {
+    const types = Array.isArray(node['@type']) ? node['@type'] : [node['@type']];
+    if (types.includes('Organization') && node.name !== BRAND_NAME) wrongOrgNames += 1;
+    if (types.includes('WebSite') && node.name && node.name !== BRAND_NAME) wrongWebNames += 1;
+  }
+  if (/property="og:site_name" content="(?!عسل تايم")/.test(html)) staleOgNames += 1;
+  if (/\| شات (?:عسل تايم|درر العرب)/.test(html)) staleSuffixes += 1;
+  if (html.includes('شات درر العرب')) staleNetworkMentions += 1;
+  if (html.includes('%D8%B4%D8%A7%D8%AA%20%D8%AF%D8%B1%D8%B1%20%D8%A7%D9%84%D8%B9%D8%B1%D8%A8')) staleEncodedShares += 1;
+  if (/class="ds-brand"[\s\S]{0,220}?>شات/.test(html)) wrongHeaderBrand += 1;
+  if (/footer-brandname">شات/.test(html)) wrongFooterBrand += 1;
+  if (/class="copyrights">[^<]*شات/.test(html)) wrongCopyright += 1;
 }
 check(staleSearch === 0, 'لا مسار بحث قديم في أي صفحة');
 check(staleTool === 0, 'لا أداة ذكاء اصطناعي قديمة في أي صفحة');
 check(enrichedTools > 3000, `أدوات الذكاء الاصطناعي الموسّعة في ${enrichedTools} صفحة`);
 check(orgNames > 2000, `اسم العلامة «عسل تايم» موحّد في ${orgNames} صفحة`);
-check(staleOrgNames === 0, 'لا حقل اسم كيان ما زال يحمل «شات عسل تايم»');
+check(wrongOrgNames === 0, 'كل حقل Organization.name هو «عسل تايم»');
+check(wrongWebNames === 0, 'كل حقل WebSite.name هو «عسل تايم»');
+check(staleOgNames === 0, 'كل og:site_name هو «عسل تايم»');
+check(staleSuffixes === 0, 'لا لاحقة عنوان تحمل «شات عسل تايم» أو «شات درر العرب»');
+check(staleNetworkMentions === 0, 'لا ذكر لاسم الشبكة القديم «شات درر العرب» في صفحات الموقع');
+check(staleEncodedShares === 0, 'روابط المشاركة لا تحمل الاسم القديم مُشفّراً');
+check(wrongHeaderBrand === 0, 'شعار الترويسة يعرض «عسل تايم»');
+check(wrongFooterBrand === 0, 'شعار التذييل يعرض «عسل تايم»');
+check(wrongCopyright === 0, 'حقوق النشر باسم «عسل تايم»');
 
 console.log(`\nBRAND/AI CHECKS: ${passed} PASS, ${failed} FAIL`);
 process.exit(failed ? 1 : 0);
