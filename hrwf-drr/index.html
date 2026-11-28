@@ -127,6 +127,9 @@
 
 <script src="/assets/app.js" defer></script>
 <script src="/assets/chat-config.js" defer></script>
-<script src="/assets/chat.js" defer></script>
+<script>
+window.__loadChat=function(){if(window.__chatRequested)return null;window.__chatRequested=1;var s=document.createElement('script');s.src='/assets/chat.js';s.defer=true;document.head.appendChild(s);return s};
+document.addEventListener('submit',function(e){var f=e.target;if(!f||!f.classList||!f.classList.contains('px-enter'))return;if(window.__chatBooted)return;window.__chatBooted=1;e.preventDefault();var s=window.__loadChat();if(!s){return}var go=function(){if(f.requestSubmit){f.requestSubmit()}else{f.dispatchEvent(new Event('submit',{bubbles:true,cancelable:true}))}};s.addEventListener('load',go,{once:true});s.addEventListener('error',function(){var h=f.getAttribute('data-href');if(h){location.href=h}},{once:true})},true);
+</script>
 </body>
 </html>
